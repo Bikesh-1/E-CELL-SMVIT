@@ -462,7 +462,7 @@ html,body{
     /* background-color: #EFEBE2; */
     position: relative;
     padding: 2vw 2vw;
-    /* overflow-x: hidden; */
+    
 
 }
 
@@ -489,7 +489,7 @@ html,body{
 #footer-div{
     height: 20vh;
     width: 100%;
-    /* background-color: red; */
+    
 }
 
 #footer-bottom{
@@ -507,7 +507,7 @@ html,body{
     font-weight:lighter;
     margin-top: 2vw;
 }
-/* Main container styling */
+
 #page7b {
     height: 130vh;
     width: 100%;
@@ -516,7 +516,6 @@ html,body{
     padding: 2vw 2vw;
 }
 
-/* Middle container styling */
 #ach-middle {
     height: 95vh;
     width: 100%;
