@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 <body>
     <div id="footer">
@@ -20,14 +22,17 @@
             </div>
         </div>
     </div>
-    <div id="loader">
+    <!-- <div id="loader">
         <img src="./images/Ecell Logo Vector.svg" alt="Loading Logo">
         <div id="progress-bar"></div>
-    </div>
+    </div> -->
     
     <div id="main">
         <div id="page1">
-
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
+            <div id="purple"></div>
             <div id="nav">
                 <div id="nav-left">
                     <img src="./images/ecellwhite.png" alt="">
@@ -63,17 +68,17 @@
                     <video muted loop autoplay src="./ecellintro.mp4" ></video>
                     <div id="hover-txt">
                         <h1>E-CELL</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, debitis quibusdam! Nobis incidunt, sit error nihil eligendi, quibusdam quos quae optio aliquam natus numquam consequuntur eos at excepturi in iure consectetur iste veniam iusto ipsum quidem non. Aliquid sapiente sequi minus dolor, animi ducimus itaque dolorum expedita corrupti et at amet commodi vitae optio facere provident dignissimos illo? Dolore eos blanditiis obcaecati natus facilis, quod provident. Sed voluptas dicta vitae, animi velit excepturi quo mollitia temporibus, voluptatibus soluta iste quod cum corrupti autem dolor eos. Modi veritatis nesciunt eligendi iste nihil placeat! Consectetur, debitis quod dicta facilis reprehenderit voluptatum velit!</p>
+                        <p>Founded with the vision of fostering entrepreneurship and innovation, the Entrepreneurship Cell (E-Cell) at SMVIT has grown into a dynamic community of passionate individuals. Initially re-established in 2021 by a dedicated group of seniors, the club has thrived as a platform for students eager to explore the world of startups, networking, and business development.
+                            In just three years, our E-Cell has achieved significant milestones. We proudly represented SMVIT at prestigious competitions and events, including the National Entrepreneurship Challenges (NEC) hosted by IIT Madras and IIT Bombay. At the IIT Bombay NEC, our team secured an impressive 16th place, showcasing our commitment to excellence and growth on a national scale. Beyond competitions, our members have attended startup expos, such as Startup Melas, where we networked with industry leaders and gained insights into the latest trends in the startup ecosystem.
+                            On campus, the E-Cell organizes a variety of events designed to nurture entrepreneurial skills and encourage innovative thinking. We’ve hosted pitching competitions that allow students to present their startup ideas, receive valuable feedback, and even gain mentorship from industry experts. Additionally, our events foster essential skills, from ideation and business planning to effective pitching and networking, ensuring our members are well-prepared for real-world challenges. 
+                            Looking ahead, our mission remains the same: to build a community of like-minded individuals driven by creativity and ambition. The E-Cell is not just a club but a launchpad for those with dreams of creating and leading ventures that make an impact. Join us, and be part of a community that believes in turning ideas into reality!</p>
                     </div>
                 </div>         
             </div>
 
         </div>
         <div id="page3">
-            <div id="pg-3txt">
-                <img src="./images/Ecell Logo Vector.svg" alt="">
-                <h1> We foster <br> innovation and <span style="border-bottom: 5px solid rgb(255, 255, 255); font-family: cursive; color: #6e31a3; font-style: italic; ">entrepreneurship</span>  <br> among students!</h1>
-            </div>
+                <h1>ENTREPRENEURSHIP</h1>
         </div>
         <div id="page4">
             <h1>EVENTS</h1>
@@ -654,9 +659,10 @@
 
         </div>   
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>    
 </body>
 </html>
