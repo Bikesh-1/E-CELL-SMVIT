@@ -181,8 +181,8 @@ ScrollTrigger.refresh();
 
 
 
-gsap.to("#page3 h1", {
-    x: "-80%",
+gsap.to("#page3 h1, #page3 #img-p3 img", {
+    x: "-330%",
     scrollTrigger: {
         trigger: "#page3",
         scroller: "#main",
