@@ -8,25 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-    <div id="footer">
-        <div id="footer-div"><img src="./images/Ecell Logo Vector.svg" alt=""></div>
-        <h1>E-CELL</h1>
-        <p style="font-size: 4vw;" >Sir M Visvesvaraya Institute of Technology</p>
-        <div id="footer-bottom">
-            <div id="footer-bottom-txt">
-                <p>Made by Bikesh</p>
-            </div>
-        </div>
-    </div>
-    <!-- <div id="loader">
-        <img src="./images/Ecell Logo Vector.svg" alt="Loading Logo">
-        <div id="progress-bar"></div>
-    </div> -->
-    
     <div id="main">
         <div id="page1">
             <div id='stars'></div>
@@ -38,13 +22,14 @@
                     <img src="./images/ecellwhite.png" alt="">
                 </div>
                 <div id="nav-right">
-                    <h4><a href=""></a>Home</h4>
-                    <h4><a href="#"></a>About</h4>
-                    <h4><a href="#"></a>Events</h4>
-                    <h4><a href="#"></a>Our Team</h4>
-                    <!-- <h4><a href="#"></a>Gallery</h4> -->
-                    <h4><a href="#"></a>Blogs</h4>
+                    <h4><a href="#">Home</a></h4>
+                    <h4><a id="scroll-btn" href="#">About</a></h4>
+                    <h4><a href="#">Events</a></h4>
+                    <h4><a href="#">Our Team</a></h4>
+                    <!-- <h4><a href="#">Gallery</a></h4> -->
+                    <h4><a href="./Blogs/index.html" target="_blank">Blogs</a></h4>
                 </div>
+                
                 
             </div>
             <div id="middle">
@@ -55,17 +40,16 @@
                 </div>
             </div>
             <div id="bottom">
-                <a href="https://www.linkedin.com/company/e-cell-sirmvit/mycompany/" target="_blank" rel="noopener"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="#"><i class="ri-instagram-fill"></i></a>
-                <a href="https://www.linkedin.com/company/e-cell-sirmvit/mycompany/"><i class="ri-facebook-circle-fill"></i></a>
-                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="https://www.linkedin.com/company/e-cell-sirmvit/mycompany/" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="https://bit.ly/48N8KBx" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a>
+                <a href="https://www.youtube.com/@E-CellSMVIT" target="_blank" rel="noopener noreferrer"><i class="ri-youtube-fill"></i></a>
             </div>
         </div>
         <div id="page2">
-            <h1>About</h1>
+            <h1 style="color: black;">About</h1>
             <div id="middle-p2">
                 <div id="right-p2">
-                    <video muted loop autoplay src="./ecellintro.mp4" ></video>
+                    <video muted loop autoplay src="./videos/ecellintro.mp4" ></video>
                     <div id="hover-txt">
                         <h1>E-CELL</h1>
                         <p>Founded with the vision of fostering entrepreneurship and innovation, the Entrepreneurship Cell (E-Cell) at SMVIT has grown into a dynamic community of passionate individuals. Initially re-established in 2021 by a dedicated group of seniors, the club has thrived as a platform for students eager to explore the world of startups, networking, and business development.
@@ -78,13 +62,7 @@
 
         </div>
         <div id="page3">
-                <h1>ENTREPRENEURSHIP</h1>
-                <div id="img-p3">
-                    <img src="./Group 1.png" alt="">
-                    <img src="./Group 2.png" alt="">
-                    <img src="./Group 3.png" alt="">
-                    <img src="./Group 4.png" alt="">
-                </div>
+                
         </div>
         <div id="page4">
             <h1>EVENTS</h1>
@@ -96,56 +74,70 @@
                 </div>
                 <div id="eventscards">
                     <div id="card1" class="card">
-                        <video id="compImg" muted loop autoplay src="./E-cell video.mp4"></video>
+                        <img id="compImg" src="./images/startpitch.jpg" alt="">
                         <div class="overlay">
-                            <button class="register-btn"> <a href="#">Register for Competition</a> </button>
+                            <button class="register-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyQU_aMIKywgCGHFSFlPDWbw8FWxu9FeZg0Frr_4Av2leNaA/viewform" target="_blank" rel="noopener noreferrer">Register for Competition</a></button>
                         </div>
                     </div>
                     <div id="card2" class="card">
                         <img id="workImg" src="./images/WhatsApp Image 2024-10-19 at 17.57.35_d242ddbf.jpg" alt="">
-                        <div class="overlay">
-                            <button class="register-btn"> <a href="#">Register for Workshop</a> </button>
+                        <div class="overlay" >
+                            <button class="register-btn"><a href="#" style="color: red;">Registration are Closed</a></button>
                         </div>
                     </div>
                     <div id="card3" class="card">
                         <img id="semImg" src="./images/WhatsApp Image 2024-10-03 at 16.43.34_94514cfb.jpg" alt="">
                         <div class="overlay">
-                            <button class="register-btn"> <a href="#">Register for Seminar</a> </button>
+                            <button class="register-btn"><a href="#" style="color: red;">Registration are Closed</a></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
          
-        <div id="page7b">
-            <h1>Our Achievement</h1>
+        <div id="page5">
+            <h1>OUR ACHIEVEMENT</h1>
             <div id="ach-middle">
-                <div id="text-ach">
-                    <!-- Each achievement item can be a separate div for easy toggling -->
-                    <div class="achievement-item active">
-                        <div id="left-ach">
-                            <img src="./images/WhatsApp Image 2024-10-03 at 16.43.34_94514cfb.jpg" alt="Achievement 1">
-                        </div>
-                        <div id="right-ach">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eligendi non inventore nihil. Cumque pariatur sed quo corporis odio itaque eius magnam iure ea nesciunt veritatis deserunt nihil incidunt eaque corrupti molestiae quia ut dolores culpa necessitatibus possimus, fugiat veniam ipsam numquam. Fugiat at ipsam eos debitis cumque alias voluptatibus vitae voluptatum natus, asperiores ex ea. Repudiandae nisi nesciunt facere aliquam in dolorem accusantium reprehenderit nihil rem! Fugit soluta nostrum adipisci, cupiditate repellat, voluptatum distinctio beatae iure facilis atque fuga totam itaque, repudiandae quas vel natus animi minima? Quasi deserunt dignissimos exercitationem assumenda nemo provident numquam, magni corrupti ut! Ab.</p>
-                        </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="image-text">This photo features the entire E-Cell contingent from the 2023 team who represented SMVIT at IIT Bombay. The dedicated team members attended workshops, participated in competitions, and connected with entrepreneurial minds from across the country, making it a memorable and enriching experience for everyone involved.</div>
+                        <img src="./images/Achievment-1.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image-text">Achievement 2</div>
+                        <img src="./images/achivement-2.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image-text">Achievement 3</div>
+                        <img src="./images/achivement-3.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image-text">Achievement 4</div>
+                        <img src="./images/achivement-4.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image-text">Achievement 5</div>
+                        <img src="./images/achivement-5.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image-text">Achievement 6</div>
+                        <img src="./images/achivement-6.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="image-text">Achievement 7</div>
+                        <img src="./images/achivement-7.jpg" alt="">
+                      </div>
                     </div>
-                    <div class="achievement-item">
-                        <div id="left-ach">
-                            <img src="./images/WhatsApp Image 2024-10-19 at 17.57.35_d242ddbf.jpg" alt="Achievement 2">
-                        </div>
-                        <div id="right-ach">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore quod suscipit accusantium vel sequi optio quasi, aperiam dolorum facere architecto. Unde optio ipsam minima, eaque aliquam alias hic nisi qui soluta earum provident nulla rerum! Similique, placeat eos. Non soluta ipsam delectus cum maxime animi debitis unde omnis deleniti asperiores recusandae, dignissimos dicta labore veniam minus possimus! Architecto velit eligendi facilis, earum, a culpa similique eaque amet, aliquid quod doloribus libero obcaecati officiis ducimus repudiandae eos nesciunt necessitatibus ipsum ipsa. Numquam exercitationem, dolor deleniti commodi incidunt obcaecati reprehenderit labore itaque voluptate sequi? Accusamus voluptas minus necessitatibus expedita quidem odio a.</p>
-                        </div>
-                    </div>
-                    <!-- Add more achievement items as needed -->
-                </div>
-                <div id="btn-ach">
-                    <button id="prev-btn"><i class="ri-arrow-left-line"></i></button>
-                    <button id="next-btn"><i class="ri-arrow-right-line"></i></button>
-                </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
             </div>
+           
         </div>
+        
         <div id="page10">
             <div id="moving-text">
                 <div class="con">
@@ -195,7 +187,7 @@
                         <img src="./images/Abhishek.jpg" alt="Your Image" class="image">
                     </div>
                     <div class="links">
-                        <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                        <a href=" https://www.linkedin.com/in/abhishek-thakur-283582223/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                         <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
@@ -211,7 +203,7 @@
                             <img src="./images/Tanish.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/tanish-raj-598617224/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -224,7 +216,7 @@
                             <img src="./images/kanishk.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/kanishk-chaudhary-917731278/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -237,7 +229,7 @@
                             <img src="./images/Shashidhar.jpeg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href=" https://www.linkedin.com/in/shashidhar-hegde-9b4645270/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -250,7 +242,7 @@
                             <img src="./images/Hansikha.jpeg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href=" https://www.linkedin.com/in/hansikha-venkatesh-6733a7225/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -263,7 +255,7 @@
                             <img src="./images/carol.png" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/caroldsillva/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -279,7 +271,7 @@
                             <img src="./images/Ayush.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/rathore10/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -292,7 +284,7 @@
                             <img src="./images/Ayush.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/chinmayi-reddy-777724239/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -305,7 +297,7 @@
                             <img src="./images/puru.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/purushuttam-kumar0102/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -318,7 +310,7 @@
                             <img src="./images/YASWANTH.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/d-yaswanth-kumar-2470a123a/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -331,7 +323,7 @@
                             <img src="./images/rithanya2.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
-                            <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                            <a href="" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
                             <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                         </div>
                     </div>
@@ -382,7 +374,7 @@
                 <div id="cards-1">
                     <div class="card">
                         <div class="image-container">
-                            <img src="./images/Sneha.jpeg" alt="Your Image" class="image">
+                            <img src="./images/Atharv.jpg" alt="Your Image" class="image">
                         </div>
                         <div class="links">
                             <a href="https://www.linkedin.com" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
@@ -660,15 +652,12 @@
             </div>
             
             
-        </div>
-        <div id="page8">
-
-        </div>   
+        </div> 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>    
 </body>
 </html>

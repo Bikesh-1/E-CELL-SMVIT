@@ -10,44 +10,7 @@
 html,body{
     height: 100%;
     width: 100%;
-}
-#loader {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    z-index: 9999999999999;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: transform 0.8s ease, opacity 0.8s ease; /* Add smooth transitions for sliding and fading */
-    opacity: 1; /* Initial opacity */
-}
-
-#loader img {
-    height: 10vw;
-    opacity: 0;
-    animation: fade-in 2s ease forwards;
-}
-
-#progress-bar {
-    width: 0%;
-    height: 5px;
-    background-color: #ffffff;
-    margin-top: 20px;
-    animation: progress 2s linear forwards;
-}
-
-@keyframes fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes progress {
-    0% { width: 0; }
-    100% { width: 100%; }
+    scroll-behavior: smooth;
 }
 
 #main{
@@ -74,67 +37,67 @@ html,body{
     position: relative;
     z-index: 100;
 }
-#nav-right{
+
+#nav-right {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5vw;
 }
-#nav-right h4{
+
+/* Navigation Items */
+#nav-right h4 {
     padding: 10px 20px;
     border: 1px solid #ffffff;
     border-radius: 50px;
     font-weight: 500;
-    color: #ffffff;
     font-size: 18px;
     position: relative;
-    transition: all ease 0.4s;
     overflow: hidden;
     cursor: pointer;
+    transition: background-color 0.4s, border-color 0.4s;
 }
 
 
-/* important  */
-#nav-right h4::after{
-    content:"" ;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(255, 255, 255); 
-    left: 0;
-    bottom: -100%;
-    border-radius: 50%;
-    transition: all ease 0.4s;
-    z-index: -1;
-}
-#nav-right h4:hover::after{
-    bottom: 0;
-    border-radius: 0;
-}
-
-#nav-right h4 a{
+#nav-right h4 a {
     text-decoration: none;
-    color:#171716 ;
+    color: #ffffff;
     position: relative;
-    z-index: 9;
-}
-#nav-right h4:hover {
-    color: rgb(0, 0, 0);
+    z-index: 1;
+    transition: color 0.4s;
 }
 
-#nav #nav-left img{
-    margin-top:1vw;
-    height: 7vw;
-    
+/* Hover Effects for Navigation Items */
+#nav-right h4:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
+
+/* Change Text Color on Hover */
+#nav-right h4:hover a {
+    color: #000000;
+}
+
+/* Optional: Change Text Color When Hovering Directly on the Link */
+#nav-right h4 a:hover {
+    color: #000000;
+}
+
+/* Left Navigation Image (if applicable) */
+#nav #nav-left img {
+    margin-top: 1vw;
+    height: 7vw;
+}
+
 #middle #txt{
     text-align: center;
 }
 #middle #txt h1{
     font-size: 5vw;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 900;
     color: white;
+    
 }
 #middle #txt h2{
     font-size: 2vw;
@@ -168,6 +131,7 @@ html,body{
 #bottom a:nth-child(2){
     text-decoration: none;
     color: #ffffff;
+    /* background-color: #fb0d0d; */
 }
 
 #bottom a:nth-child(1):hover{
@@ -179,11 +143,9 @@ html,body{
     -webkit-text-fill-color: transparent;
 }
 #bottom a:nth-child(3):hover{
-    color: #0967FF;
+    color: red;
 }
-#bottom a:nth-child(4):hover{
-    color: #488eff;
-}
+
 #page2{
     min-height: 100vh;
     width: 100%;
@@ -217,7 +179,7 @@ html,body{
 
 #page2 h1 {
     font-size: 2.5vw;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 #middle-p2 {
@@ -341,6 +303,7 @@ html,body{
     border-radius: 1vw;
     margin: 1vw;
 }
+/* Overall page styling */
 #page4 {
     height: 100vh;
     width: 100%;
@@ -349,6 +312,7 @@ html,body{
     padding: 2vw;
 }
 
+/* Container for event cards */
 #page4 #eventscards {
     gap: 2vw;
     display: flex;
@@ -357,6 +321,7 @@ html,body{
     padding: 5vw;
 }
 
+/* Main event section styling */
 #page4 #Events {
     height: 90vh;
     width: 100%;
@@ -365,8 +330,10 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* flex-direction: column; */
 }
 
+/* Card styling */
 #page4 #eventscards .card {
     height: 30vw;
     width: 20vw;
@@ -374,18 +341,19 @@ html,body{
     border-radius: 2vw;
     overflow: hidden;
     position: relative;
+    display: none; /* Hide all cards by default */
 }
 
-#page4 #eventscards video,
 #page4 #eventscards img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     position: absolute;
     top: 0;
     left: 0;
 }
 
+/* Overlay for card text and button */
 #page4 #eventscards .overlay {
     position: absolute;
     top: 0;
@@ -399,12 +367,13 @@ html,body{
     padding: 1vw;
     color: white;
 }
-#page4 #eventscards .register-btn a{
+
+#page4 #eventscards .register-btn a {
     text-decoration: none;
     color: white;
 }
 
-
+/* Register button styling */
 #page4 #eventscards .register-btn {
     background-color: #000000;
     color: white;
@@ -421,25 +390,21 @@ html,body{
     background-color: #181818;
 }
 
-#eventstxt #comp,
-#eventstxt #work,
-#eventstxt #sem {
+/* Header section for event types */
+#eventstxt h1 {
     color: #504A45;
     text-transform: uppercase;
     font-size: 5vw;
     font-weight: 800;
     cursor: pointer;
+    margin-left: 7vw;
+    transition: color 0.3s ease, margin-left 0.3s ease;
 }
 
-
-#eventstxt #comp {
-    color: #EFEAE3;
-}
-
-#eventstxt p {
-    color: #EFEAE3;
-    padding: 0 5vw;
-    display: none;
+/* Active state styling for selected event type */
+#eventstxt h1.active {
+    color: #ffffff;
+    margin-left: 5vw;
 }
 
 .con{
@@ -487,163 +452,56 @@ html,body{
 }
 
 
-#page8{
-    min-height: 150vh;
-    width: 100%;
-    /* background-color: #EFEBE2; */
-    position: relative;
-    padding: 2vw 2vw;
-    
-
-}
-
-#footer{
-    position: fixed;
-    height: 105vh;
-    width: 100%;
-    background-color: #000000;
-    color: white;
-    bottom: 0;
-    z-index: 9999999;
-    display: flex;
-    align-items: center;
-    justify-content:flex-end;
-    flex-direction: column;
-    padding: 1vw 3vw;
-}
-
-#footer h1{
-    font-size: 23vw;
-}
-
-
-#footer-div{
-    height: 20vh;
-    width: 100%;
-    
-}
-
-#footer-bottom{
-    border-top: 1px solid #dadada;
-    height: 10vh;
-    width: 100%;
-}
-#footer-bottom-txt{
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content:space-between ;
-}
-#footer-bottom-txt p{
-    font-weight:lighter;
-    margin-top: 2vw;
-}
-
-#page7b {
-    height: 130vh;
+#page5{
+    min-height: 100vh;
     width: 100%;
     background-color: #ffffff;
     position: relative;
     padding: 2vw 2vw;
+    /* color: white; */
 }
-
-#ach-middle {
-    height: 95vh;
+#page5 #ach-middle{
     width: 100%;
-    background-color: #000000;
-    border-radius: 2vw;
+    height: 85vh;
+    background-color: black;
+    border-radius: 1vw;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2vw;
-    gap: 2vw;
+    justify-content: space-between; /* Adjust spacing between items */
+    flex-direction: row; /* Ensure items are aligned horizontally */
+    padding: 2vw; /* Add padding for better spacing */
 }
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
 
-
-#text-ach {
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 5vw;
-    padding-top: 3vw;
-    padding-left: 15vw;
-}
-
-
-.achievement-item {
-    display: none; 
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 5vw;
-    transition: opacity 0.5s ease; /* Smooth transition */
-}
+  }
 
-.achievement-item.active {
-    display: flex; /* Show the active item */
-}
-
-/* Left achievement image styling */
-#left-ach img {
-    height: 30vw;
-    border-radius: 2vw;
-}
-
-/* Right achievement text styling */
-#right-ach {
-    border-left: solid white 5px;
+  .swiper-slide img {
     display: block;
-}
-
-#right-ach p {
-    color: white;
-    width: 50%;
-    padding: 2vw;
-}
-
-/* Button container styling */
-#btn-ach {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5vw;
-}
-
-/* Button styling */
-#btn-ach button {
-    background-color: white;
-    font-size: 2.5vw;
-    border-radius: 50%;
-    padding: 1vw;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-/* Button hover effect */
-#btn-ach button:hover {
-    background-color: #ddd;
-}
-
-/* Transition effect for achievement items */
-.achievement-item.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.achievement-item:not(.active) {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image-text{
+   position: absolute; 
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.872);
+   color: white;
+   text-align: center;
+   padding: 1vw;
+  }
 
 
-#footer #footer-div img{
-    padding: 2vw;
-    height: 12vw;
-    width: 12vw;
-}
 
 #page10{
     min-height: 100vh;
@@ -683,7 +541,7 @@ html,body{
 .image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .card:hover .image-container {
@@ -934,8 +792,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-
-/* resposive */
 
 
 

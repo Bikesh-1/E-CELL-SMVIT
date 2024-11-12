@@ -19,97 +19,44 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  // Handle card and image toggling for sections
-  const comp = document.querySelector("#comp");
-  const work = document.querySelector("#work");
-  const sem = document.querySelector("#sem");
+// Select all necessary elements
+const comp = document.querySelector("#comp");
+const work = document.querySelector("#work");
+const sem = document.querySelector("#sem");
 
-  const card1 = document.querySelector("#card1");
-  const card2 = document.querySelector("#card2");
-  const card3 = document.querySelector("#card3");
+const card1 = document.querySelector("#card1");
+const card2 = document.querySelector("#card2");
+const card3 = document.querySelector("#card3");
 
-  const compImg = document.querySelector("#compImg");
-  const workImg = document.querySelector("#workImg");
-  const semImg = document.querySelector("#semImg");
+// Function to show only the selected section and apply active styling
+function showSection(cardToShow, activeButton) {
+    // Hide all cards
+    [card1, card2, card3].forEach(card => card.style.display = "none");
+    
+    // Remove active class from all buttons and reset styling
+    [comp, work, sem].forEach(button => button.classList.remove("active"));
+    
+    // Show the specified card and apply active styling to the button
+    cardToShow.style.display = "block";
+    activeButton.classList.add("active");
+}
 
-  const compTxt = document.querySelector("#compTxt");
-  const workTxt = document.querySelector("#workTxt");
-  const semTxt = document.querySelector("#semTxt");
+// Initialize by showing the Competition section by default
+showSection(card1, comp);
 
-  // Initialize display for comp section
-  if (compImg && card1) {
-      compImg.style.display = "block";
-      card1.style.display = "block";
-      card2.style.display = "none";
-      card3.style.display = "none";
-  }
+// Event listeners for toggling sections
+comp.addEventListener("click", () => showSection(card1, comp));
+work.addEventListener("click", () => showSection(card2, work));
+sem.addEventListener("click", () => showSection(card3, sem));
 
-  // Add event listeners to section buttons, only if they exist
-  if (comp && work && sem && card1 && card2 && card3) {
-      comp.addEventListener("click", function() {
-          card1.style.display = "block";
-          card2.style.display = "none";
-          card3.style.display = "none";
-          compImg.style.display = "block";
-          workImg.style.display = "none";
-          semImg.style.display = "none";
-          comp.style.marginLeft = "5vw";
-          comp.style.color = "#EFEAE3";
-          work.style.color = "#504A45";
-          work.style.marginLeft = "7vw";
-          sem.style.color = "#504A45";
-          sem.style.marginLeft = "7vw";
-          compTxt.style.display = "block";
-          workTxt.style.display = "none";
-          semTxt.style.display = "none";
-      });
 
-      work.addEventListener("click", function() {
-          card2.style.display = "block";
-          card1.style.display = "none";
-          card3.style.display = "none";
-          compImg.style.display = "none";
-          workImg.style.display = "block";
-          semImg.style.display = "none";
-          work.style.marginLeft = "5vw";
-          work.style.color = "#EFEAE3";
-          comp.style.color = "#504A45";
-          comp.style.marginLeft = "7vw";
-          sem.style.color = "#504A45";
-          sem.style.marginLeft = "7vw";
-          workTxt.style.display = "block";
-          compTxt.style.display = "none";
-          semTxt.style.display = "none";
-      });
 
-      sem.addEventListener("click", function() {
-          card3.style.display = "block";
-          card2.style.display = "none";
-          card1.style.display = "none";
-          compImg.style.display = "none";
-          workImg.style.display = "none";
-          semImg.style.display = "block";
-          sem.style.marginLeft = "5vw";
-          sem.style.color = "#EFEAE3";
-          comp.style.color = "#504A45";
-          comp.style.marginLeft = "7vw";
-          work.style.color = "#504A45";
-          work.style.marginLeft = "7vw";
-          semTxt.style.display = "block";
-          workTxt.style.display = "none";
-          compTxt.style.display = "none";
-      });
-  } else {
-      console.warn('One or more elements for the section toggling are missing.');
-  }
-
-  // Achievement item slider functionality
   const achievements = document.querySelectorAll('.achievement-item');
   const nextBtn = document.getElementById('next-btn');
   const prevBtn = document.getElementById('prev-btn');
   let currentIndex = 0;
 
-  // Function to show the achievement item at the specified index
+
   function showAchievement(index) {
       achievements.forEach((item, i) => {
           item.classList.toggle('active', i === index);
@@ -179,17 +126,21 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 ScrollTrigger.refresh();
 
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
-
-gsap.to("#page3 h1, #page3 #img-p3 img", {
-    x: "-330%",
-    scrollTrigger: {
-        trigger: "#page3",
-        scroller: "#main",
-        markers: true,
-        start: "top top",
-        end: "top -100%",
-        scrub: 1,
-        pin: true,
-    }
-});
+ 
