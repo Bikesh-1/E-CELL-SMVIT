@@ -13,6 +13,7 @@
 <body>
     <div id="main">
         <div id="page1">
+            
             <div id='stars'></div>
             <div id='stars2'></div>
             <div id='stars3'></div>
@@ -21,17 +22,32 @@
                 <div id="nav-left">
                     <img src="./images/ecellwhite.png" alt="">
                 </div>
+                
                 <div id="nav-right">
                     <h4><a href="#">Home</a></h4>
-                    <h4><a id="scroll-btn" href="#">About</a></h4>
+                    <h4><a href="#">About</a></h4>
                     <h4><a href="#">Events</a></h4>
                     <h4><a href="#">Our Team</a></h4>
-                    <!-- <h4><a href="#">Gallery</a></h4> -->
                     <h4><a href="./Blogs/index.html" target="_blank">Blogs</a></h4>
                 </div>
+            
+                <!-- Hamburger Icon -->
+                <div id="hamburger-menu" onclick="toggleSidebar()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
                 
-                
+                <!-- Sidebar -->
+                <div id="sidebar" class="sidebar">
+                    <h4><a href="#">Home</a></h4>
+                    <h4><a href="#">About</a></h4>
+                    <h4><a href="#">Events</a></h4>
+                    <h4><a href="#">Our Team</a></h4>
+                    <h4><a href="./Blogs/index.html" target="_blank">Blogs</a></h4>
+                </div>
             </div>
+            
             <div id="middle">
                 <div id="txt">
                     <p>"Where aspiration meets opportunity"</p>
@@ -106,27 +122,19 @@
                         <img src="./images/Achievment-1.jpg" alt="">
                       </div>
                       <div class="swiper-slide">
-                        <div class="image-text">Achievement 2</div>
-                        <img src="./images/achivement-2.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="image-text">Achievement 3</div>
-                        <img src="./images/achivement-3.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="image-text">Achievement 4</div>
+                        <div class="image-text">In this photo, our E-Cell team members are joined by Ranjeet Deshmukh, founder of RoadBounce and a featured entrepreneur on Shark Tank. Meeting such an inspiring figure offered invaluable insights into innovation and perseverance, making it a memorable moment for our team.</div>
                         <img src="./images/achivement-4.jpg" alt="">
                       </div>
                       <div class="swiper-slide">
-                        <div class="image-text">Achievement 5</div>
+                        <div class="image-text">This photo captured our experience in the 10 Minute Million event at IIT Bombay, where our E-Cell had the privilege of attending impactful sessions and networking opportunities. A highlight was hearing from Bhavish Aggarwal, founder of Ola, who shared invaluable insights on entrepreneurship and innovation. This experience truly inspired our passion for startups and growth.</div>
                         <img src="./images/achivement-5.jpg" alt="">
                       </div>
                       <div class="swiper-slide">
-                        <div class="image-text">Achievement 6</div>
+                        <div class="image-text">This photo captures our interactive session and induction event for first-year students, where they were introduced to the E-Cell community. Through engaging discussions and activities, new members learned about entrepreneurship, the club’s mission, and upcoming opportunities to develop their skills and ideas.</div>
                         <img src="./images/achivement-6.jpg" alt="">
                       </div>
                       <div class="swiper-slide">
-                        <div class="image-text">Achievement 7</div>
+                        <div class="image-text">This photo captures our E-Cell’s first visit to the IIT Bombay summit, a milestone for the inaugural batch. Inspired by seeing the entire IIT Bombay E-Cell team on stage, they set an ambitious goal: to one day host an E-Summit at our own college. This experience ignited a vision for building a thriving entrepreneurial community.</div>
                         <img src="./images/achivement-7.jpg" alt="">
                       </div>
                     </div>
@@ -191,8 +199,8 @@
                         <a href="" target="_blank"><i class="ri-instagram-fill"></i></a>
                     </div>
                 </div>
-                <h2>ABHISHEK THAKUR</h2>
-                <p>Overall Cordinator</p>
+                <h2 style="color: white;">ABHISHEK THAKUR</h2>
+                <p style="color: white;">Overall Cordinator</p>
             </div>
             <h1 style="color: white;">HEADS</h1>
             <div id="head-card">
@@ -653,6 +661,34 @@
             
             
         </div> 
+        <div id="page12">
+            <div id="footer-1">
+                <div id="footer-1-left">
+                    <h1>QUICK LINKS</h1>
+                    <a href="#">About Us</a>
+                    <a href="#">Events</a>
+                    <a href="#">Team</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div id="footer-1-center">
+                    <div id="img">
+                        <img src="./images/Ecell Logo Vector.svg" alt="">
+                    </div>
+                    <div id="icons">
+                        <a href="https://www.linkedin.com/company/e-cell-sirmvit/mycompany/" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill"></i></a>
+                        <a href="https://bit.ly/48N8KBx" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line"></i></a>
+                        <a href="https://www.youtube.com/@E-CellSMVIT" target="_blank" rel="noopener noreferrer"><i class="ri-youtube-fill"></i></a>
+                    </div>
+        
+                </div>
+                <div id="footer-1-right">
+                    <p>E-Cell Sir MVIT <br> Bengaluru, Karnataka</p>
+                </div>
+            </div>
+            <div id="footer-2">
+                <p>© 2024 ALL RIGHTS RESERVED. E-CELL MVIT®</p>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

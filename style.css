@@ -36,6 +36,7 @@ html,body{
     justify-content: space-between;
     position: relative;
     z-index: 100;
+    
 }
 
 #nav-right {
@@ -467,9 +468,10 @@ html,body{
     border-radius: 1vw;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adjust spacing between items */
-    flex-direction: row; /* Ensure items are aligned horizontally */
-    padding: 2vw; /* Add padding for better spacing */
+    justify-content: space-between;
+    flex-direction: row; 
+    padding: 2vw; 
+    margin-top: 2vw;
 }
 .swiper {
     width: 100%;
@@ -479,6 +481,7 @@ html,body{
   .swiper-slide {
     text-align: center;
     font-size: 18px;
+    border-radius: 1vw;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -490,6 +493,7 @@ html,body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1vw;
   }
   .image-text{
    position: absolute; 
@@ -791,6 +795,148 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+#page12{
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vw;
+    gap: 2vw;
+}
+#page12 #footer-1{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+}
+#page12 #footer-1-center #img img{
+    height: 10vw;
+    margin-bottom: 1vw;
+    margin-left: 2vw;
+}
+
+#page12 a{
+    text-decoration: none;
+    color: white;
+    font-size: 1vw;
+}
+#page12 #footer-1-center #icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#page12 #footer-1-left{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+#page12 #footer-1-center a{
+    font-size: 2vw;
+}
+
+/* Style for the sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden initially */
+    height: 100%;
+    width: 250px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar h4 {
+    padding: 8px 8px;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 4px;
+    margin: 5px;
+    background-color: #333;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    #hamburger-menu {
+        display: block; /* Show the hamburger icon on smaller screens */
+    }
+    
+    #nav-right {
+        display: none; /* Hide nav links */
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #page1{
+        background-color: red;
+    }
+    #page1 #middle h1{
+        font-size: 35px;
+    }
+    #nav-right{
+        display: none;
+    }
+    #page1 #middle p{
+        font-size: 20px;
+    }
+    #page1 #middle h2{
+        font-size: 20px;
+    }
+    #page1 #nav-left img{
+        height: 100px;
+    }
+    #page1 #bottom a{
+        font-size: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
