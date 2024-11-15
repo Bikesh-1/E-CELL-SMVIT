@@ -867,6 +867,7 @@ button:hover {
         font-size: 20px;
     }
     #page1 #nav-left img{
+        padding: 1vw;
         height: 100px;
     }
     #page1 #bottom a{
