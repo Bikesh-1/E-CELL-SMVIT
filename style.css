@@ -148,7 +148,7 @@ html,body{
 }
 
 #page2{
-    min-height: 100vh;
+    min-height: 62.5vw;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -228,9 +228,11 @@ html,body{
 #page2 #middle-p2 #right-p2 #hover-txt p {
     padding: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
-
+#page2 #responsive{
+    display: none;
+}
 /* Hover effect on video to display text */
 #page2 #middle-p2 #right-p2 video:hover + #hover-txt {
     opacity: 1;
@@ -426,8 +428,8 @@ html,body{
     display: inline-block;
 }
 #gola{
-    height: 35px;
-    width: 35px;
+    height: 1.8vw;
+    width: 1.8vw;
     border-radius: 50%;
     background-color: #ffffff;
     display: inline-block;
@@ -515,7 +517,6 @@ html,body{
     padding: 2vw 2vw;
 }
 #cards{
-    border-bottom: 1px solid rgb(177, 177, 177);
     gap: 1vw;
     flex-direction: column;
     display: flex;
@@ -524,8 +525,8 @@ html,body{
 }
 .card {
     position: relative;
-    width: 200px;
-    height: 250px;
+    width: 13.89vw;
+    height: 17.36vw;    
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
@@ -634,7 +635,12 @@ html,body{
     align-items: center;
     justify-content: center;
 }
-
+#page10 p{
+    font-size: 1vw;
+}
+#page10 h2{
+    font-size: 1.2vw;
+}
 #exc-cards{
     text-align: center;
     padding: 5vw;
@@ -647,8 +653,9 @@ html,body{
 }
 .card-ex{
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 13.89vw;
+    height: 13.89vw;
+    
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -843,68 +850,10 @@ button:hover {
     font-size: 2vw;
 }
 
-/* Style for the sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hidden initially */
-    height: 100%;
-    width: 250px;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-}
-
-.sidebar h4 {
-    padding: 8px 8px;
-    text-align: center;
-    background-color: #333;
-    margin: 0;
-    border-bottom: 1px solid #444;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-#nav-right {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#hamburger-menu {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.bar {
-    width: 25px;
-    height: 4px;
-    margin: 5px;
-    background-color: #333;
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 600px) {
-    #hamburger-menu {
-        display: block; /* Show the hamburger icon on smaller screens */
-    }
-    
-    #nav-right {
-        display: none; /* Hide nav links */
-    }
-}
 
 
-@media only screen and (max-width: 600px) {
-    #page1{
-        height: 50vh;
 
-    }
+@media only screen and (max-width: 768px) {
     #page1 #middle h1{
         font-size: 35px;
     }
@@ -923,6 +872,12 @@ button:hover {
     #page1 #bottom a{
         font-size: 25px;
     }
+   
+    #page4 #Events .card{
+        width: 40vw;
+        height: 60vw;
+    }
+
 }
 
 
