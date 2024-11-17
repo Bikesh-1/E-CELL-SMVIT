@@ -85,7 +85,7 @@ html,body{
     color: white;
     padding: 2vw;
 }
-#date{
+#middle-right #date{
     font-size: 1.2vw; 
     padding-top: 2vw; 
     padding-top: 2vw;
@@ -96,12 +96,20 @@ html,body{
     object-fit: cover;
     border-radius: 1vw;
 }
+#middle-right #by{
+    font-size: 1vw; 
+    padding-top: 3vw;
+}
+
 
 @media only screen and (max-width: 768px) {
-    #page1{
-        background-color: red;
-    }
     #top-right{
         font-size: 25px;
+    }
+    #middle-right #date{
+        font-size: 20px;
+    }
+    #middle-right #by{
+        font-size: 20px;
     }
 }
