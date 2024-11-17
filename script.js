@@ -146,6 +146,31 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
+ // Initialize Barba.js
+barba.init({
+  transitions: [
+    {
+      name: 'fade',
+      leave(data) {
+        // Create a fade-out effect
+        return gsap.to(data.current.container, {
+          opacity: 0,
+          duration: 0.5
+        });
+      },
+      enter(data) {
+        // Create a fade-in effect
+        return gsap.from(data.next.container, {
+          opacity: 0,
+          duration: 0.5
+        });
+      }
+    }
+  ]
+});
+
+
+
 
 
 

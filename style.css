@@ -308,7 +308,7 @@ html,body{
 }
 /* Overall page styling */
 #page4 {
-    height: 62.5vw;
+    height: 100vh;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -691,12 +691,11 @@ html,body{
     justify-content: center;
 }
 
-#page11{
-    min-height: 100vh;
+#page11 {
     width: 100%;
     background-color: #ffffff;
     position: relative;
-    padding:2vw;
+    padding: 2vw;
 }
 
 #page11 #contact {
@@ -706,21 +705,25 @@ html,body{
     flex-direction: column;
 }
 
-#page11 #contact #cont-left{
+#page11 #contact #cont-left {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10vw;
     font-size: 1.3vw;
+    flex-wrap: wrap;
 }
 
-#page11 #contact #cont-left i{
+#page11 #contact #cont-left i {
     font-size: 2vw;
     border: 1px solid black;
     padding: 1vw;
     border-radius: 50%;
 }
-#page11 #contact #cont-left #cont-left-phn{
+
+#page11 #contact #cont-left #cont-left-phn,
+#page11 #contact #cont-left #cont-left-email,
+#page11 #contact #cont-left #cont-left-locat {
     gap: 2vw;
     display: flex;
     align-items: center;
@@ -728,32 +731,20 @@ html,body{
     flex-direction: column;
 }
 
-#page11 #contact #cont-left #cont-left-email{
-    gap: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#page11 #contact #cont-left #cont-left-locat{
-    gap: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#page11 #cont-right #cont-right-map iframe{
+#page11 #cont-right #cont-right-map iframe {
     height: 20vw;
     width: 20vw;
     border-radius: 1vw;
     /* background-color: red; */
 }
-#page11 #cont-right{
+
+#page11 #cont-right {
     padding: 5vw;
     display: flex;
     align-items: end;
     justify-content: center;
     gap: 20vw;
+    flex-wrap: wrap;
 }
 
 .contact-form {
@@ -801,6 +792,24 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    #page11 #contact #cont-left {
+        gap: 5vw;
+        font-size: 2vw;
+    }
+
+    #page11 #cont-right #cont-right-map iframe {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        max-width: 100%;
+    }
 }
 #page12{
     height: 50vh;
@@ -878,7 +887,11 @@ button:hover {
         width: 40vw;
         height: 60vw;
     }
-
+    ##page12{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
