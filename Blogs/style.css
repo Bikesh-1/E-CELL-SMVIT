@@ -31,6 +31,7 @@ html,body{
 
 #top-left img{
     width: 8vw;
+    padding: 1vw;
     
 }
 
@@ -40,7 +41,10 @@ html,body{
     align-items: center;
     gap: 2vw;
     /* color: white; */
-    font-size: 2vw;
+    font-size: 3vw;
+}
+#top-left #txt{
+    font-size: 1.2vw;
 }
 
 #top-right a{
@@ -81,7 +85,11 @@ html,body{
     color: white;
     padding: 2vw;
 }
-
+#date{
+    font-size: 1.2vw; 
+    padding-top: 2vw; 
+    padding-top: 2vw;
+}
 #content img{
     width: 40vw;
     height: 25vw;
@@ -89,4 +97,11 @@ html,body{
     border-radius: 1vw;
 }
 
-
+@media only screen and (max-width: 768px) {
+    #page1{
+        background-color: red;
+    }
+    #top-right{
+        font-size: 25px;
+    }
+}
