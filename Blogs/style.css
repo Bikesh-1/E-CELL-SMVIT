@@ -12,7 +12,7 @@ html,body{
 
 #page1{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: black;
     padding: 3vw 5vw;
 }
@@ -31,6 +31,7 @@ html,body{
 
 #top-left img{
     width: 100px;
+    
 }
 
 #top-right{
@@ -50,14 +51,15 @@ html,body{
 #middle{
     display: flex;
     justify-content:center;
+    flex-direction: column;
     align-items: start;
     gap: 2vw;
     padding: 3vw 5vw;
 }
 #middle-left img{
-    width: 40vw;
-    height: 25vw;
-    object-fit: cover;
+    width: 70vw;
+    /* height: 25vw; */
+    object-fit: fill;
     border-radius: 1vw;
 }
 #middle-right{
