@@ -125,63 +125,103 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-document.querySelectorAll('.abtbtn').forEach(link => {
+// document.querySelectorAll('.abtbtn').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault(); // Prevent default jump behavior
+//     const targetId = this.getAttribute('href').substring(1); // Get id without the #
+//     const targetElement = document.getElementById(targetId);
+//     if (targetElement) {
+//       targetElement.scrollIntoView({
+//         behavior: 'smooth' // Smooth scrolling
+//       });
+//     }
+//   });
+// });
+
+// document.querySelectorAll('.eventbtn').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault(); // Prevent default jump behavior
+//     const targetId = this.getAttribute('href').substring(1); // Get id without the #
+//     const targetElement = document.getElementById(targetId);
+//     if (targetElement) {
+//       targetElement.scrollIntoView({
+//         behavior: 'smooth' // Smooth scrolling
+//       });
+//     }
+//   });
+// });
+
+// document.querySelectorAll('.teambtn').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault(); // Prevent default jump behavior
+//     const targetId = this.getAttribute('href').substring(1); // Get id without the #
+//     const targetElement = document.getElementById(targetId);
+//     if (targetElement) {
+//       targetElement.scrollIntoView({
+//         behavior: 'smooth' // Smooth scrolling
+//       });
+//     }
+//   });
+// });
+
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector('#main'),
+//   smooth: true
+// });
+
+// Initialize Locomotive Scroll
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true,
+});
+
+// Add event listeners for smooth scrolling
+document.querySelectorAll('.teambtn').forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default jump behavior
+    e.preventDefault(); // Prevent default anchor behavior
     const targetId = this.getAttribute('href').substring(1); // Get id without the #
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth' // Smooth scrolling
+      // Use Locomotive Scroll's `scrollTo` method
+      scroll.scrollTo(targetElement, {
+        offset: 0,        // Adjust offset if needed
+        duration: 1000,   // Scrolling duration in milliseconds
+        easing: [0.25, 0.00, 0.35, 1.00], // Cubic bezier easing for smooth animation
       });
     }
   });
 });
+
 
 document.querySelectorAll('.eventbtn').forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default jump behavior
+    e.preventDefault(); // Prevent default anchor behavior
     const targetId = this.getAttribute('href').substring(1); // Get id without the #
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth' // Smooth scrolling
+      // Use Locomotive Scroll's `scrollTo` method
+      scroll.scrollTo(targetElement, {
+        offset: 0,        // Adjust offset if needed
+        duration: 1000,   // Scrolling duration in milliseconds
+        easing: [0.25, 0.00, 0.35, 1.00], // Cubic bezier easing for smooth animation
       });
     }
   });
 });
 
-document.querySelectorAll('.teambtn').forEach(link => {
+
+document.querySelectorAll('.abtbtn').forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default jump behavior
+    e.preventDefault(); // Prevent default anchor behavior
     const targetId = this.getAttribute('href').substring(1); // Get id without the #
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth' // Smooth scrolling
+      // Use Locomotive Scroll's `scrollTo` method
+      scroll.scrollTo(targetElement, {
+        offset: 0,        // Adjust offset if needed
+        duration: 1000,   // Scrolling duration in milliseconds
+        easing: [0.25, 0.00, 0.35, 1.00], // Cubic bezier easing for smooth animation
       });
     }
   });
 });
-
-
-
-// Initialize Lenniscroll
-document.addEventListener("DOMContentLoaded", function () {
-  const scroll = new Lenniscroll({
-    smoothness: 0.1, // Adjust smoothness (0 - 1 range; lower values mean smoother)
-    container: document.body, // Element where scrolling is applied
-    useKeyboard: true, // Enable smooth scrolling with keyboard input
-  });
-
-  // Activate Lenniscroll
-  scroll.start();
-});
-
-
-
-
-
-
-
- 
