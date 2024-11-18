@@ -88,6 +88,12 @@ html,body{
 #middle-right #date{
     font-size: 1.2vw; 
 }
+
+#top-left a{
+    text-decoration: none;
+    color: white;
+    font-size: 4vw;
+}
 #middle-right a{
     text-decoration: none;
     color: red;

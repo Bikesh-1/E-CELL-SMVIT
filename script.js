@@ -166,6 +166,18 @@ document.querySelectorAll('.teambtn').forEach(link => {
 
 
 
+// Initialize Lenniscroll
+document.addEventListener("DOMContentLoaded", function () {
+  const scroll = new Lenniscroll({
+    smoothness: 0.1, // Adjust smoothness (0 - 1 range; lower values mean smoother)
+    container: document.body, // Element where scrolling is applied
+    useKeyboard: true, // Enable smooth scrolling with keyboard input
+  });
+
+  // Activate Lenniscroll
+  scroll.start();
+});
+
 
 
 
