@@ -34,6 +34,18 @@ html,body{
     padding: 1vw;
     
 }
+#middle-left h1{
+    color: white;
+    font-size: 3vw;
+    font-weight: 600;
+}
+#middle-left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+}
 
 #top-right{
     display: flex;
@@ -55,13 +67,13 @@ html,body{
 #middle{
     display: flex;
     justify-content:center;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: start;
     gap: 2vw;
     padding: 3vw 5vw;
 }
 #middle-left img{
-    width: 45vw;
+    width: 70vw;
     /* height: 25vw; */
     object-fit: fill;
     border-radius: 1vw;
@@ -87,13 +99,9 @@ html,body{
 }
 #middle-right #date{
     font-size: 1.2vw; 
+    padding-top: 2vw; 
+    padding-top: 2vw;
 }
-#middle-right a{
-    text-decoration: none;
-    color: red;
-    font-size: 1.2vw;
-}
-
 #content img{
     width: 40vw;
     height: 25vw;
@@ -102,7 +110,7 @@ html,body{
 }
 #middle-right #by{
     font-size: 1vw; 
-    /* padding-top: 3vw; */
+    padding-top: 3vw;
 }
 
 

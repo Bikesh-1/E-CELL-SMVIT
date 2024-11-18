@@ -1,22 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const scroll = new LocomotiveScroll({
-      el: document.querySelector('#main'),
-      smooth: true
-  });
-
-  // Loader functionality
-  const loader = document.querySelector("#loader");
-  if (loader) {
-      setTimeout(function() {
-          loader.style.transform = "translateY(-100%)"; // Slide up
-          loader.style.opacity = "0"; // Fade out
-      }, 2000);
-
-      // Remove loader from DOM after animation completes
-      loader.addEventListener('transitionend', function() {
-          loader.style.display = "none";
-      });
-  }
 
 // Select all necessary elements
 const comp = document.querySelector("#comp");
@@ -81,7 +62,7 @@ sem.addEventListener("click", () => showSection(card3, sem));
   if (achievements.length > 0) {
       showAchievement(currentIndex);
   }
-});
+
 
 
 
@@ -104,46 +85,84 @@ function validateForm() {
 // Initialize ScrollTrigger with Locomotive Scroll
 gsap.registerPlugin(ScrollTrigger);
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
+// Set smooth scrolling behavior on the body
+document.body.style.scrollBehavior = "smooth";
+
+// ScrollTrigger to handle smooth scrolling
+ScrollTrigger.defaults({
+  scroller: "#main",
+  start: "top top",
+  end: "bottom bottom",
+  scrub: 1,
 });
 
-locoScroll.on("scroll", ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-  },
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
-
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-ScrollTrigger.refresh();
-
-var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+// Set up ScrollTrigger for sections
+gsap.utils.toArray("section").forEach(section => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top center",
+    end: "bottom center",
+    pin: true,
+    markers: true, // Enable if you need debugging markers
   });
+});
 
+// Initialize Swiper
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
+document.querySelectorAll('.abtbtn').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default jump behavior
+    const targetId = this.getAttribute('href').substring(1); // Get id without the #
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth' // Smooth scrolling
+      });
+    }
+  });
+});
 
+document.querySelectorAll('.eventbtn').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default jump behavior
+    const targetId = this.getAttribute('href').substring(1); // Get id without the #
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth' // Smooth scrolling
+      });
+    }
+  });
+});
+
+document.querySelectorAll('.teambtn').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default jump behavior
+    const targetId = this.getAttribute('href').substring(1); // Get id without the #
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth' // Smooth scrolling
+      });
+    }
+  });
+});
 
 
 

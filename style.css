@@ -178,7 +178,6 @@ html,body{
 
 #page2 h1 {
     font-size: 2.5vw;
-    color: rgb(255, 255, 255);
 }
 
 #middle-p2 {
@@ -236,14 +235,73 @@ html,body{
     opacity: 1;
 }
 
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    padding: 2vw;
+}
+#page3 #top #stats{
+    color: rgb(0, 0, 0);
+    display: flex;
+    /* align-items: center; */
+    gap: 5vw;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    height: 10vw;
+    width: 40vw;
+    padding: 2vw;
+    border-radius: 1vw;
+}
+#page3 #top #stats h1{
+    font-size: 3vw;
+}
+#page3 #top #stats p{
+    font-size: 1.3vw;
+}
+
+#page3 #top{
+    display: flex;
+}
+#page3 #top #vision{
+    color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#page3 #top #vision p{
+    padding-top: 2vw;
+    font-size: 1.1vw;
+}
+#page3 #bottom #mission{
+    color: white;
+}
+#page3 #bottom p{
+    width: 38%;
+    padding-top: 2vw;
+    font-size: 1.3vw;
+}
+
+#page3  #icons img{
+    width: 15vw;
+    display: flex;
+    opacity: 0.5;
+    margin-left: 5vw;
+}
+
+
 #page4{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: #ffffff;
     position: relative;
     padding: 2vw;
 }
-
+#page4 h1{
+    font-size: 2.5vw;
+}
 /* Container for event cards */
 #page4 #eventscards {
     gap: 2vw;
@@ -255,6 +313,7 @@ html,body{
 
 /* Main event section styling */
 #page4 #Events {
+    margin-top: 1vw;
     height: 90vh;
     width: 100%;
     background-color: #000;
@@ -392,6 +451,9 @@ html,body{
     padding: 2vw 2vw;
     /* color: white; */
 }
+#page5 h1{
+    font-size: 2.5vw;
+}
 #page5 #ach-middle{
     width: 100%;
     height: 85vh;
@@ -484,8 +546,8 @@ html,body{
 
 .links {
     position: absolute;
-    top: 50%;
-    left: 35%;
+    top: 48%;
+    left: 41%;
     /* transform: translate(-50% -50%); */
     display: none;
 }
@@ -505,6 +567,7 @@ html,body{
 
 .links a:hover {
     opacity: 1;
+    color: #0056b3;
 }
 
 #cards-1{
@@ -626,7 +689,9 @@ html,body{
     position: relative;
     padding: 2vw;
 }
-
+#page11 h1{
+    font-size: 2.5vw;
+}
 #page11 #contact {
     display: flex;
     align-items: center;
