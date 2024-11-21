@@ -137,7 +137,8 @@ html,body{
         flex-direction: column;
     }
     #middle-left img{
-        width: 640px; /* Assuming viewport width is 1600px */
+        width: 640px;
+        height: 320px; /* Assuming viewport width is 1600px */
         
         object-fit: cover;
         border-radius: 1vw;
@@ -149,7 +150,8 @@ html,body{
 
     }
     #content img{
-        width: 640px;
+        width: 400px;
+        height: 250px;
         object-fit: cover;
         border-radius: 1vw;
     }
