@@ -131,4 +131,9 @@ html,body{
     #middle-right #by{
         font-size: 20px;
     }
+    #top{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
