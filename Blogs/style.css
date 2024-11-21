@@ -131,9 +131,12 @@ html,body{
     #middle-right #by{
         font-size: 20px;
     }
-    #top{
+    #middle{
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    #content-right a{
+        font-size: 50px;
     }
 }
