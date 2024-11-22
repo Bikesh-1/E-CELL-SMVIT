@@ -146,7 +146,7 @@ html,body{
 }
 
 #page2{
-    height: 100vh;
+    height: 50vw;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -235,7 +235,7 @@ html,body{
     opacity: 1;
 }
 #page3{
-    height: 100vh;
+    height: 50vh;
     width: 100%;
     background-color: #000;
     position: relative;
@@ -301,7 +301,7 @@ html,body{
 
 
 #page4{
-    min-height: 100vh;
+    min-height: 50vw;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -322,7 +322,7 @@ html,body{
 /* Main event section styling */
 #page4 #Events {
     margin-top: 1vw;
-    height: 90vh;
+    height: 40vw;
     width: 100%;
     background-color: #000;
     border-radius: 2vw;
@@ -452,7 +452,7 @@ html,body{
 
 
 #page5{
-    min-height: 100vh;
+    min-height: 50vw;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -890,16 +890,13 @@ button:hover {
         font-size: 30px;
     }
    
-    #page4 #Events .card{
-        width: 40vw;
-        height: 60vw;
-    }
+    
     #page12{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    #page3 #top{
+    /* #page3 #top{
         margin-top: 20px;
         height: 150px;
     }
@@ -913,33 +910,32 @@ button:hover {
         display: flex;
         align-items: center;
         flex-direction: column;
-    }
-    #page3 #bottom #mission{
+    } */
+    /* #page3 #bottom #mission{
         height: 150px;
         width: 310px;
-        /* font-size: 50px; */
-    }
-    #page3 #bottom #mission p{
+        
+    } */
+    /* #page3 #bottom #mission p{
         font-size: 10px;
-    }
-    #page3 #bottom #vision{
+    } */
+    /* #page3 #bottom #vision{
         height: 150px;
         width: 310px;
-        /* font-size: 50px; */
-    }
-    #page3 #bottom #vision p{
+        
+    } */
+    /* #page3 #bottom #vision p{
         font-size: 10px;
-    }
-    #page2 #right-p2 video{
+    } */
+    /* #page2 #right-p2 video{
         height: 250px;
     }
     #page2 #right-p2 #hover-txt h1{
-        /* display: none; */
         display: none;
     }
     #page2 #right-p2 #hover-txt p{
         display: none;
-    }
+    } */
     #page12 img{
         display: none;
     }
