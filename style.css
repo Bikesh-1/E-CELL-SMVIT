@@ -782,7 +782,7 @@ textarea {
 
 textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 10vw;
 }
 
 button {
@@ -807,17 +807,6 @@ button:hover {
         gap: 5vw;
         font-size: 2vw;
     }
-
-    #page11 #cont-right #cont-right-map iframe {
-        height: 40vw;
-        width: 40vw;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        max-width: 100%;
-    }
 }
 #page12{
     height: 50vh;
@@ -830,6 +819,9 @@ button:hover {
     flex-direction: column;
     padding: 2vw;
     gap: 2vw;
+}
+#page12 #footer-1 h1{
+    font-size: 3vw;
 }
 #page12 #footer-1{
     display: flex;
@@ -848,7 +840,7 @@ button:hover {
 #page12 a{
     text-decoration: none;
     color: white;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 #page12 #footer-1-center #icons{
     display: flex;
@@ -864,6 +856,9 @@ button:hover {
     gap: 1vw;
 }
 #page12 #footer-1-center a{
+    font-size: 2vw;
+}
+#page12 #footer-1-right p{
     font-size: 2vw;
 }
 
@@ -945,6 +940,28 @@ button:hover {
     #page2 #right-p2 #hover-txt p{
         display: none;
     }
+    #page12 img{
+        display: none;
+    }
+    #page12 #icons a{
+        display: none;
+    }
+    #page11 #cont-right-map{
+        display: none;
+    }
+    #page11 #contactForm #name{
+        width: 300px;
+    }
+    #page11 #contactForm #email{
+        width: 300px;
+    }
+    #page11 #contactForm #subject{
+        width: 300px;
+    }
+    #page11 #contactForm #message{
+        width: 300px;
+    }
+
 }
 
 
