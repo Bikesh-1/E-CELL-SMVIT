@@ -275,9 +275,11 @@ html,body{
     gap: 5vw;
     margin-right: 6vw;
 }
-
+#page3 #bottom h1{
+    font-size: 2.5vw;
+}
 #page3 #bottom p{
-    font-size: large;
+    font-size:1.2vw;
 }
 
 #page3 #bottom #mission{
@@ -869,8 +871,12 @@ button:hover {
 
 
 @media only screen and (max-width: 768px) {
+
+    #page1 #middle{
+        margin-top: -100px;
+    }
     #page1 #middle h1{
-        font-size: 35px;
+        font-size: 30px;
     }
     #nav-right{
         display: none;
@@ -886,17 +892,58 @@ button:hover {
         height: 100px;
     }
     #page1 #bottom a{
-        font-size: 25px;
+        font-size: 30px;
     }
    
     #page4 #Events .card{
         width: 40vw;
         height: 60vw;
     }
-    ##page12{
+    #page12{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    #page3 #top{
+        margin-top: 20px;
+        height: 150px;
+    }
+    #page3 #top h1{
+        font-size: 20px;
+    }
+    #page3 #top p{
+        font-size: 8px;
+    }
+    #page3 #bottom{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #page3 #bottom #mission{
+        height: 150px;
+        width: 310px;
+        /* font-size: 50px; */
+    }
+    #page3 #bottom #mission p{
+        font-size: 10px;
+    }
+    #page3 #bottom #vision{
+        height: 150px;
+        width: 310px;
+        /* font-size: 50px; */
+    }
+    #page3 #bottom #vision p{
+        font-size: 10px;
+    }
+    #page2 #right-p2 video{
+        height: 250px;
+    }
+    #page2 #right-p2 #hover-txt h1{
+        /* display: none; */
+        display: none;
+    }
+    #page2 #right-p2 #hover-txt p{
+        display: none;
     }
 }
 
