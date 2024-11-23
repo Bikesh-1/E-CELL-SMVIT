@@ -146,7 +146,7 @@ html,body{
 }
 
 #page2{
-    height: 50vw;
+    min-height: 100vh;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -235,7 +235,7 @@ html,body{
     opacity: 1;
 }
 #page3{
-    height: 40vh;
+    height: 100vh;
     width: 100%;
     background-color: #000;
     position: relative;
@@ -301,7 +301,7 @@ html,body{
 
 
 #page4{
-    min-height: 50vw;
+    min-height: 100vh;
     width: 100%;
     background-color: #ffffff;
     position: relative;
@@ -322,7 +322,7 @@ html,body{
 /* Main event section styling */
 #page4 #Events {
     margin-top: 1vw;
-    height: 40vw;
+    height: 90vh;
     width: 100%;
     background-color: #000;
     border-radius: 2vw;
@@ -613,11 +613,12 @@ html,body{
 #advisor-card{
     padding: 5vw;
     text-align: center;
-    gap: 5vw;
+    gap: 10vw;
     /* flex-direction: column; */
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
@@ -656,14 +657,15 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .card-ex{
     position: relative;
-    width: 13.89vw;
-    height: 13.89vw;
+    width: 15vw;
+    height: 18vw;
     
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 2vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -861,17 +863,88 @@ button:hover {
 #page12 #footer-1-right p{
     font-size: 2vw;
 }
+#page1 #middle #responsive-txt{
+    display: none;
+}
+#page1 #middle #moti{
+    display: none;
+}
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: white;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    border: 1px solid #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu li {
+    padding: 10px 20px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu li:hover {
+    background-color: #444;
+  }
 
-
-
+  #hamu{
+    display: none;
+  }
+  #page2 #responsive-page2{
+    display: none;
+  }
 
 @media only screen and (max-width: 768px) {
 
     #page1 #middle{
         margin-top: -100px;
     }
-    #page1 #middle h1{
+    #page1 #middle #normal{
+        display: none;
+    }
+    #page1 #middle p{
+        display: none;
+    }
+    #page1 #middle #responsive-txt{
+        display: block;
+        font-size: 80px;
+        font-weight: 500;
+    }
+    #page1 #middle #moti{
+        display: block;
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    #page1 #middle #txt h2{
+        /* margin-top: 20px; */
         font-size: 30px;
+    }
+    #hamu{
+        display: block;
     }
     #nav-right{
         display: none;
@@ -884,17 +957,158 @@ button:hover {
     }
     #page1 #nav-left img{
         padding: 1vw;
-        height: 100px;
+        height: 80px;
     }
     #page1 #bottom a{
         font-size: 30px;
     }
-   
-    
+    #page1 #bottom{
+        display: flex;
+        flex-direction: row;
+        top: 85%;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    /* #page2{
+        background:none;
+        position: relative;
+        background-color: #000000;
+        z-index: -1;
+        padding: 15px;
+    } */
+    #page2 h1{
+        color: rgb(0, 0, 0);
+        font-size: 40px;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #page2 #middle-p2{
+        display: none;
+    }
+    #page2 #responsive-page2{
+        display: block;
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        
+    }
+    #page2 #responsive-page2 p{
+        color: #000;
+        text-align: center;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    #page2 #responsive-page2 video{
+        width: 400px;
+        border-radius: 10px;
+    }
+    #page3 #top{
+        margin-top: 20px;
+        height: 100px;
+        width: 400px;
+    }
+    #page3 #top h1{
+        font-size: 30px;
+    }
+    #page3 #top p{
+        font-size: 13px;
+    }
+    #page3 #bottom{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+    #page3 #bottom #mission{
+        height: auto;
+        width: 400px;
+    }
+    #page3 #bottom #mission h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+    #page3 #bottom #mission p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+    }
+    #page3 #bottom #vision{
+        height: auto;
+        width: 400px;
+    }
+    #page3 #bottom #vision h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+    }
+    #page3 #bottom #vision p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        text-align: center;
+    }
+    #page4 h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 900;
+    }
+
     #page12{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    #page4 #Events{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    #page4 #eventscards .card{
+        height: 400px;
+        width: 300px;
+    }
+    #page4 #eventscards .overlay button{
+        font-size: large;
+        padding: 5px;
+    }
+    #page10{
+        display: none;
+    }
+    #page5 h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    #page11 h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 900;
+    }
+    #page11 #contact #cont-left{
+        display: none;
     }
     /* #page3 #top{
         margin-top: 20px;

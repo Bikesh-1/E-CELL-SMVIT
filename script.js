@@ -225,3 +225,51 @@ document.querySelectorAll('.abtbtn').forEach(link => {
     }
   });
 });
+
+
+
+// Function to animate counting numbers
+function animateCounter(element, start, end, duration) {
+  const range = end - start;
+  let startTime = null;
+
+  function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      element.textContent = Math.floor(progress * range + start);
+      if (progress < 1) {
+          requestAnimationFrame(step);
+      }
+  }
+
+  requestAnimationFrame(step);
+}
+
+// Set up animations for each stat
+function startCounting() {
+  const stats = [
+      { id: 'stats-1', end: 3 },
+      { id: 'stats-2', end: 20 },
+      { id: 'stats-3', end: 10 },
+      { id: 'stats-4', end: 1500 }
+  ];
+
+  stats.forEach(stat => {
+      const element = document.querySelector(`#${stat.id} h1`);
+      animateCounter(element, 1, stat.end, 2000); // Duration of 2 seconds
+  });
+}
+
+// Trigger counting when the page is fully loaded
+window.addEventListener('load', startCounting);
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  hamburger.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  });
+});
