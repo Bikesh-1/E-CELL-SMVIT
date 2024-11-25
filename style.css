@@ -1419,7 +1419,9 @@ button:hover {
     #page11 #contactForm #message{
         width: 300px;
     }
-
+    #loader h1{
+        font-size: 50px;
+    }
 }
 
 
