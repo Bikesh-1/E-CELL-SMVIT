@@ -978,7 +978,81 @@ button:hover {
   #page2 #responsive-page2{
     display: none;
   }
+  #page13{
+    /* border-top: 1px solid rgb(0, 0, 0); */
+    height: 50vh;
+    width: 100%;
+    background-color: #000;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.342) 10%, rgba(0, 0, 0, 0.806) 80%); */
+    color:rgb(255, 255, 255);
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    padding: 20px;
+}
 
+#page13 #name{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#page13 #name h1{
+    font-size: 30px;
+}
+#page13 #name p{
+    font-size: 20px;
+}
+
+#page13 #icon a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+#page13 #social{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#page13 #social h1{
+    font-size: 30px;
+}
+#page13 #icon{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#page13 #icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#page13 #contact{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 5px;
+}
+#page13 #contact h1{
+    font-size: 30px;
+}
+#page13 #contact p{
+    font-size: 20px;
+}
+#page13 #foot p{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+
+}
+#page13{
+    display: none;
+}
 @media only screen and (max-width: 768px) {
 
     #page1 #middle{
@@ -1187,7 +1261,12 @@ button:hover {
         font-size: 20px;
     }
 
-
+    #page12{
+        display: none;
+    }
+    #page13{
+        display: block;
+    }
 
 
     #page10{

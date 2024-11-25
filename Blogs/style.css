@@ -147,6 +147,7 @@ html,body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
 
     }
     #content img{
@@ -154,5 +155,17 @@ html,body{
         height: 250px;
         object-fit: cover;
         border-radius: 1vw;
+    }
+    #content a{
+        font-size: 20px;
+    }
+    #middle-right a{
+        font-size: 20px;
+    }
+    #page1 #top #top-left #txt h1{
+        font-size: 15px;
+    }
+    #page1 #top #top-left #txt p{
+        font-size: 10px;
     }
 }
