@@ -42,7 +42,12 @@ html,body{
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
+#top a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
 
+}
 .image-container {
     position: absolute;
     top: 0;
@@ -111,6 +116,7 @@ html,body{
     gap: 10vw;
     /* flex-direction: column; */
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -297,6 +303,7 @@ html,body{
     display: none;
 }
 
+
 @keyframes move {
     from{
         transform: translateX(0);
@@ -305,4 +312,49 @@ html,body{
         transform: translateX(-100%);
     }
     
+}
+#top{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 60px;
+    border-bottom: 1px solid white;
+}
+#top h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+img{
+    height: 60px;
+}
+
+
+@media only screen and (max-width: 768px){
+    .card{
+        height: 200px;
+        width: 150px;
+    }
+    #cards-1 h2{
+        font-size:15px;
+    }
+    #cards-1 p{
+        font-size: 10px;
+    }
+    .card-ex{
+        height: 200px;
+        
+        width: 150px;
+    }
+    .links i{
+        font-size: 50px;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        /* transform: translate(-50%,-50%); */
+    }
 }

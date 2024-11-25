@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="178" viewBox="0 0 1012 178">
+  <g id="Group_4" data-name="Group 4" transform="translate(-399.5 -252)">
+    <path id="Path_1" data-name="Path 1" d="M36.29,39.52h121.6a33.335,33.335,0,0,1,4.248.27,25.08,25.08,0,0,0-29.454-21.113L32.68,35.75h-.114A25.08,25.08,0,0,0,16.959,45.68,33.277,33.277,0,0,1,36.29,39.52Z" transform="translate(387.53 233.753)" fill="#0047ab"/>
+    <path id="Path_2" data-name="Path 2" d="M157.89,48.64H36.29A24.347,24.347,0,0,0,11.97,72.96v72.96a24.347,24.347,0,0,0,24.32,24.32h121.6a24.347,24.347,0,0,0,24.32-24.32V72.96A24.347,24.347,0,0,0,157.89,48.64ZM139.84,121.6A12.16,12.16,0,1,1,152,109.44,12.16,12.16,0,0,1,139.84,121.6Z" transform="translate(387.53 233.753)" fill="#0047ab"/>
+    <path id="Path_3" data-name="Path 3" d="M12.16,98.61V60.8c0-8.235,4.56-22.04,20.387-25.031A165.071,165.071,0,0,1,59.28,33.25s8.74,6.08,1.52,6.08-7.03,9.31,0,9.31,0,8.93,0,8.93L32.49,89.68Z" transform="translate(387.53 233.753)" fill="#0047ab"/>
+    <text id="ShareWallet" transform="translate(591.5 404)" fill="#0047ab" font-size="140" font-family="Ubuntu-Bold, Ubuntu" font-weight="700"><tspan x="0" y="0">ShareWallet</tspan></text>
+  </g>
+</svg>
