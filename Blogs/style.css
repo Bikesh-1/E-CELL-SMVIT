@@ -119,8 +119,139 @@ html,body{
     font-size: 1vw; 
     /* padding-top: 3vw; */
 }
+#page12{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page12{
+    /* height: 50vh; */
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vw;
+    gap: 2vw;
+}
+#page12 #footer-1 h1{
+    font-size: 3vw;
+}
+#page12 #footer-1{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid white;
+}
+#page12 #footer-1-center #img img{
+    height: 10vw;
+    margin-bottom: 1vw;
+    margin-left: 2vw;
+}
 
+#page12 a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+}
+#page12 #footer-1-center #icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#page12 #footer-1-left{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+#page12 #footer-1-center a{
+    font-size: 2vw;
+}
+#page12 #footer-1-right p{
+    font-size: 2vw;
+}
+#page13{
+    /* border-top: 1px solid rgb(0, 0, 0); */
+    height: 50vh;
+    width: 100%;
+    background-color: #000;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.342) 10%, rgba(0, 0, 0, 0.806) 80%); */
+    color:rgb(255, 255, 255);
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    padding: 20px;
+}
 
+#page13 #name{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#page13 #name h1{
+    font-size: 30px;
+}
+#page13 #name p{
+    font-size: 20px;
+}
+
+#page13 #icon a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+#page13 #social{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#page13 #social h1{
+    font-size: 30px;
+}
+#page13 #icon{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#page13 #icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#page13 #contact{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 5px;
+}
+#page13 #contact h1{
+    font-size: 30px;
+}
+#page13 #contact p{
+    font-size: 20px;
+}
+#page13 #foot p{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+
+}
+#page13{
+    display: none;
+}
 @media only screen and (max-width: 768px) {
     #top-right{
         font-size: 25px;
@@ -167,5 +298,8 @@ html,body{
     }
     #page1 #top #top-left #txt p{
         font-size: 10px;
+    }
+    #page13{
+        display: block;
     }
 }

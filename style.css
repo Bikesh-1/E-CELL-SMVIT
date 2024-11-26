@@ -1380,30 +1380,7 @@ button:hover {
     #page2 #right-p2 #hover-txt p{
         display: none;
     } */
-    #page12 img{
-        display: none;
-    }
-    #page12 #icons a{
-        display: none;
-    }
-    #page12 #footer-1{
-        display: flex;
-        justify-content: space-around;
-    }
-    #page12 #footer-1-left h1{
-        font-size: xx-large;
-    }
-    #page12 #footer-1-left{
-        padding-bottom: 30px;
-    }
-    #page12 #footer-1-right p{
-        font-size: 20px;
-    }
-    #page12 #footer-1-left a{
-        font-size: 20px;
-        /* margin-bottom: 50px; */
-        /* padding-bottom: 20px; */
-    }
+    
     #page11 #cont-right-map{
         display: none;
     }
