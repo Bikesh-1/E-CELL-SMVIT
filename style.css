@@ -1195,19 +1195,19 @@ button:hover {
         border-radius: 10px;
     }
     #page2 #responsive-page2 video{
-        width: 400px;
+        width: 350px;
         border-radius: 10px;
     }
     #page3 #top{
         margin-top: 20px;
         height: 100px;
-        width: 400px;
+        width: 380px;
     }
     #page3 #top h1{
         font-size: 30px;
     }
     #page3 #top p{
-        font-size: 13px;
+        font-size: 10px;
     }
     #page3 #bottom{
         margin-top: 50px;
@@ -1217,7 +1217,7 @@ button:hover {
     }
     #page3 #bottom #mission{
         height: auto;
-        width: 400px;
+        width: 380px;
     }
     #page3 #bottom #mission h1{
         display: flex;
@@ -1234,7 +1234,7 @@ button:hover {
     }
     #page3 #bottom #vision{
         height: auto;
-        width: 400px;
+        width: 380px;
     }
     #page3 #bottom #vision h1{
         display: flex;
