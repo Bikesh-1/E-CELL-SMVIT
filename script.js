@@ -258,6 +258,20 @@ function startCounting() {
       const element = document.querySelector(`#${stat.id} h1`);
       animateCounter(element, 1, stat.end, 2000); // Duration of 2 seconds
   });
+
+  function animateCounter(element, start, end, duration) {
+      const stepTime = Math.abs(Math.floor(duration / (end - start)));
+      let current = start;
+
+      const timer = setInterval(() => {
+          element.textContent = `${current}+`;
+          if (current === end) {
+              clearInterval(timer);
+          } else {
+              current++;
+          }
+      }, stepTime);
+  }
 }
 
 // Trigger counting when the page is fully loaded
