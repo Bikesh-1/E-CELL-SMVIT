@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 3vw 5vw;
+}
+#top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#top-left{
+    color: white;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    gap: 2vw;
+}
+
+#top-left img{
+    width: 8vw;
+    padding: 1vw;
+    
+}
+#middle-left h1{
+    color: white;
+    font-size: 3vw;
+    font-weight: 600;
+}
+#middle-left{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#top-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    /* color: white; */
+    font-size: 2.5vw;
+}
+#top-left #txt{
+    font-size: 1.2vw;
+}
+
+#top-right a{
+    text-decoration: none;
+    color: white;
+}
+
+#middle{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vw;
+    padding: 3vw 5vw;
+}
+#middle-left img{
+    width: 70vw;
+    /* height: 25vw; */
+    object-fit: fill;
+    border-radius: 1vw;
+}
+#middle-right{
+    color: white;
+}
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 3vw 5vw;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    color: white;
+    padding: 2vw;
+}
+#middle-right #date{
+    font-size: 1.2vw; 
+    padding-top: 2vw; 
+    padding-top: 2vw;
+}
+#content img{
+    width: 40vw;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+#middle-right #by{
+    font-size: 1vw; 
+    padding-top: 3vw;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #top-right{
+        font-size: 25px;
+    }
+    #middle-right #date{
+        font-size: 20px;
+    }
+    #middle-right #by{
+        font-size: 20px;
+    }
+}

@@ -125,49 +125,6 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// document.querySelectorAll('.abtbtn').forEach(link => {
-//   link.addEventListener('click', function (e) {
-//     e.preventDefault(); // Prevent default jump behavior
-//     const targetId = this.getAttribute('href').substring(1); // Get id without the #
-//     const targetElement = document.getElementById(targetId);
-//     if (targetElement) {
-//       targetElement.scrollIntoView({
-//         behavior: 'smooth' // Smooth scrolling
-//       });
-//     }
-//   });
-// });
-
-// document.querySelectorAll('.eventbtn').forEach(link => {
-//   link.addEventListener('click', function (e) {
-//     e.preventDefault(); // Prevent default jump behavior
-//     const targetId = this.getAttribute('href').substring(1); // Get id without the #
-//     const targetElement = document.getElementById(targetId);
-//     if (targetElement) {
-//       targetElement.scrollIntoView({
-//         behavior: 'smooth' // Smooth scrolling
-//       });
-//     }
-//   });
-// });
-
-// document.querySelectorAll('.teambtn').forEach(link => {
-//   link.addEventListener('click', function (e) {
-//     e.preventDefault(); // Prevent default jump behavior
-//     const targetId = this.getAttribute('href').substring(1); // Get id without the #
-//     const targetElement = document.getElementById(targetId);
-//     if (targetElement) {
-//       targetElement.scrollIntoView({
-//         behavior: 'smooth' // Smooth scrolling
-//       });
-//     }
-//   });
-// });
-
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector('#main'),
-//   smooth: true
-// });
 
 // Initialize Locomotive Scroll
 const scroll = new LocomotiveScroll({

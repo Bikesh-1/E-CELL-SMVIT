@@ -71,89 +71,19 @@ gsap.to('#page4', {
 // });
 
 
-gsap.fromTo(
-    '#page3 #bottom #txt',
-    { 
-        x: -500,
-        opacity: 0
-    },
-    {   
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.4, 
-        scrollTrigger: {
-            trigger: '#page3',  
-            scroller: '#main',  
-            start: 'top top',   
-            end: 'bottom top', 
-            // scrub: true,        
-        }
-    }
-);
-gsap.fromTo(
-    '#page3 #bottom #img',
-    {   
-        x: 500,
-        opacity: 0
-    },
-    {  
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.4, 
-        scrollTrigger: {
-            trigger: '#page3',  
-            scroller: '#main',  
-            start: 'top top',   
-            end: 'bottom top',  
-            // scrub: true,        
-        }
-    }
-);
+
 
 // Refresh ScrollTrigger and Locomotive Scroll
 ScrollTrigger.addEventListener('refresh', () => scroll.update());
 ScrollTrigger.refresh();
 
 
-gsap.fromTo(
-    '#page5 #bottom #txt',
-    { 
-        x: -500,
-        opacity: 0
-    },
-    {   
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.4, 
-        scrollTrigger: {
-            trigger: '#page5',  
-            scroller: '#main',  
-            start: 'top top',   
-            end: 'bottom top', 
-            // scrub: true,        
-        }
-    }
-);
-gsap.fromTo(
-    '#page5 #bottom #img',
-    {   
-        x: 500,
-        opacity: 0
-    },
-    {  
-        x: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.4, 
-        scrollTrigger: {
-            trigger: '#page5',  
-            scroller: '#main',  
-            start: 'top top',   
-            end: 'bottom top',  
-            // scrub: true,        
-        }
-    }
-);
+    // const swiper = new Swiper('.mySwiper', {
+    //     direction: 'vertical',
+    //     spaceBetween: 30,
+    //     mousewheel: true,
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //     },
+    // });
