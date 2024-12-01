@@ -253,8 +253,21 @@ html,body{
     display: none;
 }
 @media only screen and (max-width: 768px) {
+    #top-left a{
+        font-size: 40px;
+    }
+    #top-left img{
+        width: 50px;
+    }
+    #page3 #content-left{
+        border-bottom: solid 2px white;
+    }
+    #page3 #content-right{
+        border-bottom: solid 2px white;
+    }
     #top-right{
-        font-size: 25px;
+        /* font-size: 25px; */
+        display: none;
     }
     #middle-right #date{
         font-size: 20px;
@@ -279,7 +292,7 @@ html,body{
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        gap: 20px;
+        gap: 50px;
 
     }
     #content img{

@@ -208,7 +208,7 @@ function startCounting() {
       { id: 'stats-1', end: 3 },
       { id: 'stats-2', end: 20 },
       { id: 'stats-3', end: 10 },
-      { id: 'stats-4', end: 1500 }
+      { id: 'stats-4', end: 2500 }
   ];
 
   stats.forEach(stat => {
