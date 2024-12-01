@@ -1,64 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata -->
+    <!-- Basic Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="E-CELL SMVIT fosters entrepreneurship and innovation among students. Join workshops, events, and mentorship to ignite your entrepreneurial spirit.">
-    <meta name="keywords" content="E-CELL SMVIT, Entrepreneurship, SMVIT, Startups, Innovation, Student Mentorship, Workshops, Events, E-CELL Events">
+    <meta name="description" content="Join E-CELL SMVIT to ignite your entrepreneurial spirit! Discover innovation, mentorship, and workshops designed to inspire the next generation of leaders.">
+    <meta name="keywords" content="E-CELL SMVIT, Entrepreneurship Cell, Innovation, SMVIT, Startups, Leadership Workshops, Student Mentorship, E-CELL Events, Entrepreneur Community">
     <meta name="author" content="E-CELL SMVIT Team">
     <meta name="robots" content="index, follow">
 
-    <!-- Social Media Preview -->
+    <!-- Social Media Integration -->
     <meta property="og:title" content="E-CELL SMVIT - Ignite Your Entrepreneurial Spirit">
-    <meta property="og:description" content="Empowering young minds with resources and support for innovation and entrepreneurship.">
+    <meta property="og:description" content="Join E-CELL SMVIT for workshops, mentorship, and events. Empowering the next wave of entrepreneurs.">
     <meta property="og:image" content="./images/Ecell_Logo_Vector.svg">
     <meta property="og:url" content="https://ecell-smvit.com">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="E-CELL SMVIT - Empowering Entrepreneurs">
-    <meta name="twitter:description" content="Your destination for entrepreneurial innovation, events, and mentorship at SMVIT.">
+    <meta name="twitter:description" content="Your destination for innovation, mentorship, and workshops at SMVIT.">
     <meta name="twitter:image" content="./images/Ecell_Logo_Vector.svg">
 
+    <!-- Localization -->
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN-KA">
+    <meta name="geo.placename" content="Sir M. Visvesvaraya Institute of Technology">
+    <meta name="geo.position" content="13.1986;77.7066">
+    <meta name="ICBM" content="13.1986, 77.7066">
+
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/Ecell_Logo_Vector.svg" type="image/x-icon">
+    <link rel="icon" href="./images/Ecell_Logo_Vector.svg" type="image/svg+xml">
 
     <!-- Title -->
     <title>E-CELL SMVIT - Ignite Your Entrepreneurial Spirit</title>
 
+    <!-- Preloading Key Assets -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css">
 
-    <!-- Preloading Fonts -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <!-- Scripts -->
+    <script defer src="app.js"></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "E-CELL SMVIT",
-      "url": "https://ecell-smvit.com",
-      "logo": "./images/Ecell_Logo_Vector.svg",
-      "description": "Fostering entrepreneurship and innovation among students through workshops, events, and mentorship.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-1234567890",
-        "contactType": "Customer Service"
-      },
-      "sameAs": [
-        "https://www.facebook.com/ecellsmvit",
-        "https://www.twitter.com/ecellsmvit",
-        "https://www.instagram.com/ecellsmvit"
-      ]
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "E-CELL SMVIT",
+        "url": "https://ecell-smvit.com",
+        "logo": "./images/Ecell_Logo_Vector.svg",
+        "description": "Empowering students with resources for innovation and entrepreneurship.",
+        "sameAs": [
+            "https://www.facebook.com/ecellsmvit",
+            "https://www.twitter.com/ecellsmvit",
+            "https://www.instagram.com/ecellsmvit"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-1234567890",
+            "contactType": "Customer Service"
+        },
+        "foundingDate": "2020-01-01",
+        "foundingLocation": "Sir M. Visvesvaraya Institute of Technology, Bangalore"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Entrepreneurship Workshop 2024",
+        "startDate": "2024-05-15T09:00:00",
+        "endDate": "2024-05-15T17:00:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Sir M. Visvesvaraya Institute of Technology",
+            "address": "Bangalore, Karnataka, India"
+        },
+        "image": "./images/event-poster.jpg",
+        "description": "An interactive workshop on startup ideation and business model development.",
+        "offers": {
+            "@type": "Offer",
+            "url": "https://ecell-smvit.com/events",
+            "price": "0",
+            "priceCurrency": "INR"
+        }
     }
     </script>
 </head>
