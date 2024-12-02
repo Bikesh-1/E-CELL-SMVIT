@@ -15,7 +15,7 @@ html,body{
 #loader{
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(21, 21, 21);
     position: fixed;
     z-index: 999999999999;
     top: 0;
