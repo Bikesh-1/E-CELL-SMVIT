@@ -1615,7 +1615,11 @@ button:hover {
         width: 300px;
     }
     #loader h1{
-        font-size: 50px;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 }
 
