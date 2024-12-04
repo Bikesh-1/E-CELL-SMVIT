@@ -1207,7 +1207,7 @@ button:hover {
         margin-top: 50px;
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
         /* border-radius: 5px; */
         /* background-color: white; */
     }
