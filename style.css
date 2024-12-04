@@ -1193,9 +1193,9 @@ button:hover {
     }
     #page3 #top{
         margin-top: 20px;
-        padding: 5px;
+        padding: 40px;
         height: 100px;
-        width: 380px;
+        width: 350px;
     }
     #page3 #top h1{
         font-size: 30px;
@@ -1207,14 +1207,14 @@ button:hover {
         margin-top: 50px;
         display: flex;
         flex-direction: column;
-        /* gap: 300px; */
-        border-radius: 5px;
-        background-color: white;
+        gap: 100px;
+        /* border-radius: 5px; */
+        /* background-color: white; */
     }
     #page3 #bottom #mission{
-        height: auto;
-        width: 380px;
-        background-color: transparent;
+        height: 200px;
+        width: 350px;
+        /* background-color: transparent; */
         /* border-bottom: solid 1px black; */
     }
     #page3 #bottom #mission h1{
@@ -1231,16 +1231,17 @@ button:hover {
         text-align: center;
     }
     #page3 #bottom #vision{
-        height: auto;
-        width: 380px;
-        background-color: transparent;
+        /* flex-wrap: wrap; */
+        height:300px;
+        width: 350px;
+        /* background-color: transparent; */
     }
     #page3 #bottom #vision h1{
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        margin-top: -35px;
+        /* margin-top: -35px; */
     }
     #page3 #bottom #vision p{
         display: flex;
@@ -1362,7 +1363,11 @@ button:hover {
         font-size: 50px;
     }
 }
-
+/* @media only screen and (max-width: 425px){
+    #page4 h1{
+        font-size: 2px;
+    }
+} */
 @media only screen and (max-width: 320px) {
 
     #page1 #middle{
