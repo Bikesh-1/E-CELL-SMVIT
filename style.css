@@ -1031,7 +1031,7 @@ button:hover {
   }
   #page13{
     /* border-top: 1px solid rgb(0, 0, 0); */
-    height: 50vh;
+    height: 70vh;
     width: 100%;
     background-color: #000;
     /* background: linear-gradient(rgba(255, 255, 255, 0.342) 10%, rgba(0, 0, 0, 0.806) 80%); */
@@ -1193,6 +1193,7 @@ button:hover {
     }
     #page3 #top{
         margin-top: 20px;
+        padding: 5px;
         height: 100px;
         width: 380px;
     }
@@ -1206,11 +1207,15 @@ button:hover {
         margin-top: 50px;
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        /* gap: 300px; */
+        border-radius: 5px;
+        background-color: white;
     }
     #page3 #bottom #mission{
         height: auto;
         width: 380px;
+        background-color: transparent;
+        /* border-bottom: solid 1px black; */
     }
     #page3 #bottom #mission h1{
         display: flex;
@@ -1228,12 +1233,14 @@ button:hover {
     #page3 #bottom #vision{
         height: auto;
         width: 380px;
+        background-color: transparent;
     }
     #page3 #bottom #vision h1{
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 30px;
+        margin-top: -35px;
     }
     #page3 #bottom #vision p{
         display: flex;
@@ -1249,7 +1256,9 @@ button:hover {
         font-size: 40px;
         font-weight: 900;
     }
-
+    #page5 #page5h1{
+        font-size: 38px;
+    }
     #page12{
         display: flex;
         align-items: center;
@@ -1500,7 +1509,9 @@ button:hover {
         font-size: 20px;
         font-weight: 900;
     }
-
+    #page5 #page5h1{
+        font-size: 30px;
+    }
     #page12{
         display: flex;
         align-items: center;
@@ -1532,7 +1543,9 @@ button:hover {
         text-align: center;
         font-size: 1px;
     }
-    
+    #page11 #page11cont h1{
+        font-size: 30px;
+    }
     #page6 #txt h1{
         font-size: 15px;
     }
@@ -1576,8 +1589,27 @@ button:hover {
     #page13{
         display: block;
     }
-
-
+    #page13 #name h1{
+        font-size: 25px;
+    }
+    #page13 #name p{
+        font-size: 15px;
+    }
+    #page13 #social h1{
+        font-size: 25px;
+    }
+    #page13 #icon a{
+        font-size: 20px;
+    }
+    #page13 #contact h1{
+        font-size: 25px;
+    }
+    #page13 #contact p{
+        font-size: 15px;
+    }
+    #page13 #foot p{
+        font-size: 10px;
+    }
     #page10{
         display: none;
     }
