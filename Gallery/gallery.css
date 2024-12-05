@@ -144,27 +144,7 @@ html,body{
     width: 50%;
 }
 
-swiper-container {
-    width: 100%;
-    height: 80vh;
-  }
 
-  swiper-slide {
-    border-radius: 2vw;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  swiper-slide img {
-    display: block;
-    width:50vw;
-    object-fit:cover;
-    border-radius: 2vw;
-  }
   #page4{
     min-height: 100vh;
     width: 100%;
@@ -172,7 +152,83 @@ swiper-container {
     position: relative;
     padding:2vw;
 }
-#page4 h1{
+.container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 2000px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    flex: 1;
+    height: 40vw;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 0.5s ease, transform 0.5s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card.active {
+    flex: 5;
+}
+
+.card:not(.active) {
+    flex: 1;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card.active .overlay {
+    opacity: 1;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: left bottom;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.card.active .vertical-text {
+    opacity: 0;
+}
+
+
+/* #page4 h1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,7 +236,7 @@ swiper-container {
     text-transform: uppercase;
     font-size: 2vw;
     padding-bottom: 1vw;
-}
+} */
 #page5{
     min-height: 50vh;
     width: 100%;

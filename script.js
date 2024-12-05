@@ -152,7 +152,7 @@ document.querySelectorAll('.teambtn').forEach(link => {
 
 document.querySelectorAll('.eventbtn').forEach(link => {
   link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
+    e.preventDefault(); 
     const targetId = this.getAttribute('href').substring(1); // Get id without the #
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -184,8 +184,6 @@ document.querySelectorAll('.abtbtn').forEach(link => {
 });
 
 
-
-// Function to animate counting numbers
 function animateCounter(element, start, end, duration) {
   const range = end - start;
   let startTime = null;
@@ -249,3 +247,36 @@ var loader = document.querySelector("#loader")
 setTimeout(function(){
     loader.style.top="-100%"
 },4000)
+
+
+// const topButton = document.getElementById('top-Button');
+//     const page2 = document.getElementById('page2');
+
+//     window.addEventListener('scroll', () => {
+//       // Show button when scrolling in Page 2
+//       const page2Top = page2.getBoundingClientRect().top;
+//       if (page2Top <= window.innerHeight) {
+//         topButton.style.display = 'block';
+//       } else {
+//         topButton.style.display = 'none';
+//       }
+//     });
+
+//     topButton.addEventListener('click', () => {
+//       window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//       });
+//     });
+
+function activateCard(selectedCard) {
+  const cards = document.querySelectorAll('.card7');
+  cards.forEach(card => card.classList.remove('active')); // Remove active from all cards
+  selectedCard.classList.add('active'); // Add active to clicked card
+}
+
+// Automatically activate the first card on page load
+window.onload = () => {
+  const firstCard = document.querySelector('.card7');
+  firstCard.classList.add('active'); // Set the first card as active
+};

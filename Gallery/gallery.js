@@ -44,16 +44,16 @@ gsap.to('#page1 #txt h1', {
     scale: 0.5,
     opacity: 0,
 });
-gsap.to('#page4', {
-    scrollTrigger: {
-        trigger: '#page4',
-        scroller: '#main',
-        start: 'top top',
-        end: '+=1800',
-        scrub: true,
-        pin:true,
-    },
-});
+// gsap.to('#page4', {
+//     scrollTrigger: {
+//         trigger: '#page4',
+//         scroller: '#main',
+//         start: 'top top',
+//         end: '+=1800',
+//         scrub: true,
+//         pin:true,
+//     },
+// });
 
 // The data-scroll-speed attribute automatically adjusts the speed of each element.
 
@@ -87,3 +87,9 @@ ScrollTrigger.refresh();
     //         clickable: true,
     //     },
     // });
+    function activateCard(selectedCard) {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => card.classList.remove('active')); // Remove active from all cards
+        selectedCard.classList.add('active'); // Add active to clicked card
+    }
+    

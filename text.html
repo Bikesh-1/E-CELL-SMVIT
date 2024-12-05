@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            max-width: 2000px;
+            overflow: hidden;
+        }
+
+        .card {
+            position: relative;
+            flex: 1;
+            height: 40vw;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: flex 0.5s ease, transform 0.5s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card.active {
+            flex: 5;
+        }
+
+        .card:not(.active) {
+            flex: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .card.active .overlay {
+            opacity: 1;
+        }
+
+        .vertical-text {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: rotate(-90deg) translateY(-50%);
+            transform-origin: left bottom;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .card.active .vertical-text {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="page4">
+        <div class="container">
+            <div class="card" onclick="activateCard(this)">
+                <img src="https://images.unsplash.com/photo-1721332155567-55d1b12aa271?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="Event 1">
+                <div class="vertical-text">E-Summit</div>
+                <div class="overlay">
+                    <h3>E-Summit</h3>
+                    <p>Exciting entrepreneurial sessions and more.</p>
+                </div>
+            </div>
+            <div class="card" onclick="activateCard(this)">
+                <img src="https://plus.unsplash.com/premium_photo-1675714692779-0c451bbd796a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D" alt="Event 2">
+                <div class="vertical-text">Startup Weekend</div>
+                <div class="overlay">
+                    <h3>Startup Weekend</h3>
+                    <p>Pitch your ideas in this 54-hour challenge.</p>
+                </div>
+            </div>
+            <div class="card" onclick="activateCard(this)">
+                <img src="https://images.unsplash.com/photo-1731955196267-e863d6f39794?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D" alt="Event 3">
+                <div class="vertical-text">Shark Tank</div>
+                <div class="overlay">
+                    <h3>Shark Tank</h3>
+                    <p>Present your startup to investors.</p>
+                </div>
+            </div>
+            <div class="card" onclick="activateCard(this)">
+                <img src="https://images.unsplash.com/photo-1732470878984-f35c1a805e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D" alt="Event 4">
+                <div class="vertical-text">B-Plan</div>
+                <div class="overlay">
+                    <h3>B-Plan</h3>
+                    <p>Showcase your business plan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to activate the clicked card
+        function activateCard(selectedCard) {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => card.classList.remove('active')); // Remove active from all cards
+            selectedCard.classList.add('active'); // Add active to clicked card
+        }
+
+        // Automatically activate the first card on page load
+        window.onload = () => {
+            const firstCard = document.querySelector('.card');
+            firstCard.classList.add('active'); // Set the first card as active
+        };
+    </script>
+</body>
+</html>

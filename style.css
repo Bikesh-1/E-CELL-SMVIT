@@ -12,6 +12,7 @@ html,body{
     width: 100%;
     scroll-behavior: smooth;
 }
+
 #loader{
     height: 100%;
     width: 100%;
@@ -610,6 +611,88 @@ html,body{
     flex-direction: column;
     align-items: center;
     gap: 4vw;
+}
+.container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 2000px;
+    overflow: hidden;
+}
+
+.card7 {
+    position: relative;
+    flex: 1;
+    height: 40vw;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 0.5s ease, transform 0.5s ease;
+}
+
+.card7 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card7:hover img {
+    transform: scale(1.1);
+}
+
+.card7.active {
+    flex: 5;
+}
+
+.card7:not(.active) {
+    flex: 1;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card7.active .overlay {
+    opacity: 1;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: left bottom;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.card7.active .vertical-text {
+    opacity: 0;
+}
+
+#page7{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    padding:2vw;
 }
 #page10{
     min-height: 100vh;
@@ -1314,7 +1397,7 @@ button:hover {
         flex-direction: row;
         font-size: 20px;
     }
-
+    
     #page12{
         display: none;
     }
