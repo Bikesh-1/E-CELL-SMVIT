@@ -408,6 +408,7 @@ html,body{
 
 #page4 #eventscards .overlay {
     position: absolute;
+    padding: 2vw;
     top: 0;
     left: 0;
     width: 100%;
