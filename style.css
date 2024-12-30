@@ -631,7 +631,7 @@ html,body{
     transition: flex 0.5s ease, transform 0.5s ease;
 }
 .card7 h3{
-    font-size: 5vw;
+    font-size: 2vw;
     font-weight: 500;
 }
 .card7 img {
