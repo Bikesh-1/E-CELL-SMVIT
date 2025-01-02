@@ -62,20 +62,39 @@ sem.addEventListener("click", () => showSection(card3, sem));
 
 
 
-function validateForm() {
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
-    const message = document.getElementById("message").value.trim();
+// emailjs.init("A2veRxlogvNqfl7i8"); // Replace with your actual user ID
 
-    if (name === "" || email === "" || subject === "" || message === "") {
-        alert("Please fill out all fields.");
-        return false;
-    }
+// function sendEmail() {
+//     const name = document.getElementById("name").value.trim();
+//     const email = document.getElementById("email").value.trim();
+//     const subject = document.getElementById("subject").value.trim();
+//     const message = document.getElementById("message").value.trim();
 
-    alert("Message sent successfully!");
-    return true;
-}
+//     // Validate form data
+//     if (name === "" || email === "" || subject === "" || message === "") {
+//         alert("Please fill out all fields.");
+//         return false;
+//     }
+
+//     // Send email via EmailJS
+//     const formData = {
+//         name: name,
+//         email: email,
+//         subject: subject,
+//         message: message,
+//     };
+
+//     // Send the email
+//     emailjs.send("service_jfotqc3", "template_vnfqgow", formData)
+//         .then((response) => {
+//             alert("Message sent successfully!");
+//         })
+//         .catch((error) => {
+//             alert("Error sending message: " + error.text);
+//         });
+
+//     return false;  // Prevent form from refreshing the page
+// }
 
 
 
@@ -275,3 +294,8 @@ window.onload = () => {
   const firstCard = document.querySelector('.card7');
   firstCard.classList.add('active'); 
 };
+
+
+
+
+
