@@ -810,8 +810,15 @@ html,body{
     justify-content: center;
     flex-wrap: wrap;
 }
-
-
+#page4  .overlay button a{
+    font-size: 1.5vw;
+    color: red;
+    font-weight: 500;
+}
+#page4  .overlay button{
+    width: 20vw;
+    
+}
 #advisor-card1{
     text-align: center;
     padding: 5vw;
@@ -1366,7 +1373,7 @@ button:hover {
     }
     #page4 #eventscards .overlay button{
         font-size: large;
-        padding: 5px;
+        padding: 4px;
     }
     #page6 #txt h1{
         font-size: 20px;
@@ -1625,7 +1632,7 @@ button:hover {
         width: 180px;
     }
     #page4 #eventscards .overlay button{
-        font-size: 10px;
+        font-size: 4px;
         padding: 5px;
     }
     #page4 #Events #eventstxt h1{
