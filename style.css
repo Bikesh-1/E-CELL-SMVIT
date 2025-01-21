@@ -1071,51 +1071,58 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
-  
-  .line {
+}
+
+.line {
     width: 30px;
     height: 3px;
     border-radius: 2px;
     background-color: white;
-  }
-  
-  .menu {
+}
+
+.menu {
     list-style: none;
-    width: 50%;
-    height: 300px;
-    padding: 0;
+    width: 200px; /* Adjusted for sidebar size */
+    height: 100vh; /* Full height of the screen */
+    padding: 20px 0;
     margin: 0;
     display: none; /* Hidden by default */
     flex-direction: column;
     gap: 10px;
     border-radius: 10px;
     background-color: #000000;
-    position: absolute;
-    top: 65px;
-    right: 20px;
+    position: fixed; /* Sidebar fixed */
+    top: 0;
+    right: -200px; /* Initially hidden offscreen */
+    transition: right 0.3s ease; /* Smooth transition */
     border: 1px solid #444;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu li {
+    z-index: 1000; /* Make sure it overlays other content */
+}
+
+.menu.active {
+    right: 0; /* Slide in when active */
+    display: flex;
+}
+
+.menu li {
     padding: 10px 20px;
-    /* border-bottom: 1px solid white; */
-    gap: 10px;
-  }
-  .menu li a {
+}
+
+.menu li a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-transform: uppercase;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+    font-size: 18px;
+    color: white;
     text-decoration: none;
-  }
-  
-  .menu li:hover {
+}
+
+.menu li:hover {
     background-color: #444;
-  }
+}
+
 
   #hamu{
     display: none;

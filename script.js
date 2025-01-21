@@ -164,6 +164,11 @@ document.querySelectorAll('.teambtn').forEach(link => {
   });
 });
 
+document.getElementById('hamburger').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('active');
+});
+
 
 document.querySelectorAll('.eventbtn').forEach(link => {
   link.addEventListener('click', function (e) {
