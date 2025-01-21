@@ -166,8 +166,14 @@ document.querySelectorAll('.teambtn').forEach(link => {
 
 document.getElementById('hamburger').addEventListener('click', function() {
   const menu = document.getElementById('menu');
-  menu.classList.toggle('active');
+  menu.classList.add('active');
 });
+
+document.getElementById('close-btn').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  menu.classList.remove('active');
+});
+
 
 
 document.querySelectorAll('.eventbtn').forEach(link => {

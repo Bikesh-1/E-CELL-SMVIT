@@ -1082,26 +1082,23 @@ button:hover {
 
 .menu {
     list-style: none;
-    width: 200px; /* Adjusted for sidebar size */
-    height: 100vh; /* Full height of the screen */
+    width: 200px;
+    height: 100vh;
     padding: 20px 0;
     margin: 0;
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     gap: 10px;
-    border-radius: 10px;
     background-color: #000000;
-    position: fixed; /* Sidebar fixed */
+    position: fixed;
     top: 0;
-    right: -200px; /* Initially hidden offscreen */
-    transition: right 0.3s ease; /* Smooth transition */
-    border: 1px solid #444;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Make sure it overlays other content */
+    right: -200px;
+    transition: right 0.3s ease;
+    z-index: 1000;
 }
 
 .menu.active {
-    right: 0; /* Slide in when active */
+    right: 0;
     display: flex;
 }
 
@@ -1110,9 +1107,6 @@ button:hover {
 }
 
 .menu li a {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     text-transform: uppercase;
     font-size: 18px;
     color: white;
@@ -1121,6 +1115,15 @@ button:hover {
 
 .menu li:hover {
     background-color: #444;
+}
+
+.close-btn {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    padding: 10px 20px;
+    margin-bottom: 10px;
 }
 
 
