@@ -1208,7 +1208,7 @@ button:hover {
 #page13{
     display: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
     #page1 #middle{
         margin-top: -100px;
