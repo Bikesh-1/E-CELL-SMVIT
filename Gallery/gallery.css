@@ -47,12 +47,22 @@ h1 {
     .gallery {
         columns: 2;
     }
+    #top h1{
+        font-size: 30px;
+        margin-top: 25px;
+    }
+    .nec{
+        font-size: 25px;
+        padding: 30px;
+    }
+    
 }
 
 @media (max-width: 480px) {
     .gallery {
         columns: 1;
     }
+    
 }
 
 .gallery-item {
