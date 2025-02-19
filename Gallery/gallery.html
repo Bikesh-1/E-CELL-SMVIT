@@ -4,81 +4,228 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | E-Cell Smvit</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
-    <div id="main">
-        <div id="page1">
+    <div class="scroll-indicator"></div>
+    <div class="container">
+        <div id="top">
             
-            <div id="txt">
-                <p>Welcome to </p>
-                <h1>
-                    <span>E</span>
-                    <span>-</span>
-                    <span>C</span>
-                    <span>E</span>
-                    <span>L</span>
-                    <span>L</span>
-                </h1>
-            </div>
-            <div id="bottom-txt">
-                <p>PHOTO GALLERY</p>
-            </div>
-            
+            <img src="../images/Ecell Logo Vector.svg" alt="">
+            <h1>E-CELL Smvit Gallery</h1>
         </div>
-        <div id="page2"></div>
-        <div id="page3">
-            <div id="top">
-                <p>Events Conducted by E-CELL SMVIT</p>
+        <h2 class="nec">National Entrepreneurship Compition at E'SUMMIT'25 IIT Bombay</h2>
+        <div class="gallery">
+            <div class="gallery-item" style="--delay: 1">
+                <img src="../Gallery Images/NEC IIT Bombay-1.jpg" alt="Mountain landscape">
+                <div class="overlay">
+                    <h2>Alpine Majesty</h2>
+                    <p>Towering peaks pierce through misty clouds in this dramatic mountain landscape.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 2">
+                <img src="../Gallery Images/NEC IIT Bombay-3.jpg">
+                <div class="overlay">
+                    <h2>Urban Symmetry</h2>
+                    <p>Glass and steel create mesmerizing patterns in modern architectural design.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 3">
+                <img src="../Gallery Images/NEC IIT Bombay-2.jpg" alt="Waterfall">
+                <div class="overlay">
+                    <h2>Nature's Power</h2>
+                    <p>A majestic waterfall cascades through lush green forest.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 4">
+                <img src="../Gallery Images/NEC IIT Bombay-4.JPG">
+                <div class="overlay">
+                    <h2>Golden Hour</h2>
+                    <p>Warm sunlight bathes the landscape in ethereal golden tones.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 5">
+                <img src="../Gallery Images/NEC IIT Bombay-5.jpg">
+                <div class="overlay">
+                    <h2>City Lights</h2>
+                    <p>The urban landscape comes alive with countless twinkling lights.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 6">
+                <img src="../Gallery Images/NEC IIT Bombay-6.jpg">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 7">
+                <img src="../Gallery Images/NEC IIT Bombay-7.jpg">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
             </div>
         </div>
-        <div id="page4">
-            <div class="container">
-                <div class="card" onclick="activateCard(this)">
-                    <img src="https://images.unsplash.com/photo-1721332155567-55d1b12aa271?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="Event 1">
-                    <div class="vertical-text">E-Summit</div>
-                    <div class="overlay">
-                        <h3>E-Summit</h3>
-                        <p>Exciting entrepreneurial sessions and more.</p>
-                    </div>
+        <h2 class="ideaExpo">Idea Expo at Sir Mvit</h2>
+        <div class="gallery">
+            <div class="gallery-item" style="--delay: 8">
+                <img src="../Gallery Images/ideaExpo-1.jpg" alt="Mountain landscape">
+                <div class="overlay">
+                    <h2>Alpine Majesty</h2>
+                    <p>Towering peaks pierce through misty clouds in this dramatic mountain landscape.</p>
                 </div>
-                <div class="card" onclick="activateCard(this)">
-                    <img src="https://plus.unsplash.com/premium_photo-1675714692779-0c451bbd796a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D" alt="Event 2">
-                    <div class="vertical-text">Startup Weekend</div>
-                    <div class="overlay">
-                        <h3>Startup Weekend</h3>
-                        <p>Pitch your ideas in this 54-hour challenge.</p>
-                    </div>
-                </div>
-                <div class="card" onclick="activateCard(this)">
-                    <img src="https://images.unsplash.com/photo-1731955196267-e863d6f39794?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D" alt="Event 3">
-                    <div class="vertical-text">Shark Tank</div>
-                    <div class="overlay">
-                        <h3>Shark Tank</h3>
-                        <p>Present your startup to investors.</p>
-                    </div>
-                </div>
-                <div class="card" onclick="activateCard(this)">
-                    <img src="https://images.unsplash.com/photo-1732470878984-f35c1a805e3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D" alt="Event 4">
-                    <div class="vertical-text">B-Plan</div>
-                    <div class="overlay">
-                        <h3>B-Plan</h3>
-                        <p>Showcase your business plan.</p>
-                    </div>
-                </div>
+                
             </div>
-            <div id="page5"></div>
-            <div id="page6"></div>
+            <div class="gallery-item" style="--delay: 9">
+                <img src="../Gallery Images/ideaExpo-2.jpg">
+                <div class="overlay">
+                    <h2>Urban Symmetry</h2>
+                    <p>Glass and steel create mesmerizing patterns in modern architectural design.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 10">
+                <img src="../Gallery Images/ideaExpo-3.jpg" alt="Waterfall">
+                <div class="overlay">
+                    <h2>Nature's Power</h2>
+                    <p>A majestic waterfall cascades through lush green forest.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 11">
+                <img src="../Gallery Images/ideaExpo-4.jpg">
+                <div class="overlay">
+                    <h2>Golden Hour</h2>
+                    <p>Warm sunlight bathes the landscape in ethereal golden tones.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 12">
+                <img src="../Gallery Images/ideaExpo-5.jpg">
+                <div class="overlay">
+                    <h2>City Lights</h2>
+                    <p>The urban landscape comes alive with countless twinkling lights.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 13">
+                <img src="../Gallery Images/ideaExpo-6.jpg">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 14">
+                <img src="../Gallery Images/ideaExpo-7.jpg">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 15">
+                <img src="../Gallery Images/ideaExpo-8.JPG">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 16">
+                <img src="../Gallery Images/ideaExpo-9.jpg">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
         </div>
-        
+        <h2 class="ideaExpo">National Entrepreneurship Compition at E'SUMMIT'24 IIT Bombay</h2>
+        <div class="gallery">
+            <div class="gallery-item" style="--delay: 17">
+                <img src="../Gallery Images/esummit24-1.JPG" alt="Mountain landscape">
+                <div class="overlay">
+                    <h2>Alpine Majesty</h2>
+                    <p>Towering peaks pierce through misty clouds in this dramatic mountain landscape.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 18">
+                <img src="../Gallery Images/esummit24-2.JPG">
+                <div class="overlay">
+                    <h2>Urban Symmetry</h2>
+                    <p>Glass and steel create mesmerizing patterns in modern architectural design.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 19">
+                <img src="../Gallery Images/esummit24-3.JPG" alt="Waterfall">
+                <div class="overlay">
+                    <h2>Nature's Power</h2>
+                    <p>A majestic waterfall cascades through lush green forest.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 20">
+                <img src="../Gallery Images/esummit24-4.JPG">
+                <div class="overlay">
+                    <h2>Golden Hour</h2>
+                    <p>Warm sunlight bathes the landscape in ethereal golden tones.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 21">
+                <img src="../Gallery Images/esummit24-5.JPG">
+                <div class="overlay">
+                    <h2>City Lights</h2>
+                    <p>The urban landscape comes alive with countless twinkling lights.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 22">
+                <img src="../Gallery Images/esummit24-6.JPG">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 23">
+                <img src="../Gallery Images/esummit24-7.JPG">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 24">
+                <img src="../Gallery Images/esummit24-8.JPG">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item" style="--delay: 25">
+                <img src="../Gallery Images/esummit24-9.JPG">
+                <div class="overlay">
+                    <h2>Serene Waters</h2>
+                    <p>A pristine lake reflects the surrounding landscape like a mirror.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="gallery.js"></script>
 </body>
 </html>

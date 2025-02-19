@@ -1,95 +1,24 @@
-
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true,
-    lerp: 0.1,
+ // Scroll progress indicator
+ window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.querySelector('.scroll-indicator').style.width = scrolled + '%';
 });
 
-
-scroll.on('scroll', ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy('#main', {
-    scrollTop(value) {
-        return arguments.length
-            ? scroll.scrollTo(value, 0, 0)
-            : scroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-    },
-    pinType: document.querySelector('#main').style.transform ? 'transform' : 'fixed',
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animationDelay = `${entry.target.dataset.delay * 0.2}s`;
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
 });
 
-
-
-var tl = gsap.timeline();
-
-tl.from('#txt h1 span', {
-    opacity: 0,            
-    y: 100,                   
-    duration: 1,           
-    stagger: 0.3             
+document.querySelectorAll('.gallery-item').forEach(item => {
+    observer.observe(item);
 });
-
-
-
-gsap.to('#page1 #txt h1', {
-    scrollTrigger: {
-        trigger: '#page1',
-        scroller: '#main',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true,
-    },
-    scale: 0.5,
-    opacity: 0,
-});
-// gsap.to('#page4', {
-//     scrollTrigger: {
-//         trigger: '#page4',
-//         scroller: '#main',
-//         start: 'top top',
-//         end: '+=1800',
-//         scrub: true,
-//         pin:true,
-//     },
-// });
-
-// The data-scroll-speed attribute automatically adjusts the speed of each element.
-
-
-// gsap.to('#page3 #middle p', {
-//     scrollTrigger: {
-//         trigger: '#page3',  
-//         scroller: '#main',  
-//         start: 'top top',   
-//         end: 'bottom top',  
-//         pin: true,          
-//         scrub: true,        
-//     },
-//     x: -500,               
-// });
-
-
-
-
-// Refresh ScrollTrigger and Locomotive Scroll
-ScrollTrigger.addEventListener('refresh', () => scroll.update());
-ScrollTrigger.refresh();
-
-
-    // const swiper = new Swiper('.mySwiper', {
-    //     direction: 'vertical',
-    //     spaceBetween: 30,
-    //     mousewheel: true,
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true,
-    //     },
-    // });
-    function activateCard(selectedCard) {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => card.classList.remove('active')); // Remove active from all cards
-        selectedCard.classList.add('active'); // Add active to clicked card
-    }
-    
