@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Registration</title>
+</head>
+<body>
+  <h2>Team Registration Form</h2>
+  <form id="teamForm">
+    <input type="text" name="leader_name" placeholder="Team Leader Name" required /><br />
+    <input type="text" name="usn" placeholder="USN" required /><br />
+    <input type="text" name="phone" placeholder="Phone Number" required /><br />
+    <input type="email" name="email" placeholder="Email" required /><br />
+    <input type="number" name="year" placeholder="Year" required /><br />
+    <input type="text" name="team_name" placeholder="Team Name" required /><br />
+    <input type="text" name="member_2" placeholder="Team Member 2" required /><br />
+    <input type="text" name="member_3" placeholder="Team Member 3 (Optional)" /><br />
+    <input type="text" name="member_4" placeholder="Team Member 4 (Optional)" /><br />
+    <button type="submit">Submit</button>
+  </form>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
+
+ 
+  <script>
+    const client = new Appwrite.Client();
+    const databases = new Appwrite.Databases(client);
+
+    client
+      .setEndpoint('https://fra.cloud.appwrite.io/v1') 
+      .setProject('6824cc41000d20de8f88');
+
+    const databaseId = '6824cc7c00084c0cee45';
+    const collectionId = '6824cc8e0017f267afe4';
+
+    const form = document.getElementById("teamForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const data = {
+        leader_name: formData.get("leader_name"),
+        usn: formData.get("usn"),
+        phone: formData.get("phone"),
+        email: formData.get("email"),
+        year: parseInt(formData.get("year")),
+        team_name: formData.get("team_name"),
+        member_2: formData.get("member_2"),
+        member_3: formData.get("member_3") || "",
+        member_4: formData.get("member_4") || ""
+      };
+
+      try {
+        await databases.createDocument(
+          databaseId,
+          collectionId,
+          Appwrite.ID.unique(),
+          data
+        );
+        alert("Team Registered Successfully!");
+        form.reset();
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Error submitting the form. Check console.");
+      }
+    });
+  </script>
+</body>
+</html>
