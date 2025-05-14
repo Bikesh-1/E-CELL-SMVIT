@@ -4,23 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Team Registration</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Team Registration Form</h2>
+    <div id="page1">
+        <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div id="purple"></div>
+    <div id="container">
+        <h1>Team Registration</h1>
+        <p>Welcome to the Team Registration page! Please fill out the form below to register your team.</p>
+        
+    </div>
   <form id="teamForm">
-    <input type="text" name="leader_name" placeholder="Team Leader Name" required /><br />
-    <input type="text" name="usn" placeholder="USN" required /><br />
-    <input type="text" name="phone" placeholder="Phone Number" required /><br />
-    <input type="email" name="email" placeholder="Email" required /><br />
-    <input type="number" name="year" placeholder="Year" required /><br />
-    <input type="text" name="team_name" placeholder="Team Name" required /><br />
-    <input type="text" name="member_2" placeholder="Team Member 2" required /><br />
-    <input type="text" name="member_3" placeholder="Team Member 3 (Optional)" /><br />
+    <div id="one">
+        <input type="text" name="leader_name" placeholder="Team Leader Name" required /><br />
+        <input type="text" name="usn" placeholder="USN" required /><br />
+    </div>
+    <div id="two">
+        <input type="text" name="phone" placeholder="Phone Number" required /><br />
+        <input type="email" name="email" placeholder="Email" required /><br />
+    </div>
+    <div id="three">
+        <input type="number" name="year" placeholder="Year" required /><br />
+        <input type="text" name="team_name" placeholder="Team Name" required /><br />
+    </div>
+    <div id="four">
+        <input type="text" name="member_2" placeholder="Team Member 2" required /><br />
+        <input type="text" name="member_3" placeholder="Team Member 3 (Optional)" /><br />
+        
+    </div>
     <input type="text" name="member_4" placeholder="Team Member 4 (Optional)" /><br />
+    
     <button type="submit">Submit</button>
   </form>
 
+    </div>
+    
   
+
+
   <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
 
  
