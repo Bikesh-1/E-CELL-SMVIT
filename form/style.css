@@ -94,7 +94,7 @@ html, body {
     #teamForm .input-group {
         flex-direction: column;
         align-items: center;
-        gap: 2vw;
+        gap: 4vw;
     }
 
     #teamForm .input-group input {
