@@ -96,7 +96,9 @@ html, body {
         align-items: center;
         gap: 4vw;
     }
-
+    #teamForm button{
+      margin-top: 10px;
+    }
     #teamForm .input-group input {
         width: 80vw;
         font-size: 20px;
