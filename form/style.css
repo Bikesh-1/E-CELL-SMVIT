@@ -7,87 +7,116 @@
 }
 
 
-html,body{
+
+html, body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
     overflow: hidden;
 }
 
-#page1{
+#page1 {
     min-height: 100vh;
     width: 100%;
     background-color: #000000;
     position: relative;
     padding: 0 2vw;
-
 }
 
-#page1 #container h1{
+#page1 #container h1,
+#page1 #container p {
     color: white;
-    align-items: center;
-    justify-content: center;
     display: flex;
-    padding: 2vw;
-    font-weight: lighter;
-}
-#page1 #container p{
-    color: white;
-    align-items: center;
     justify-content: center;
-    display: flex;
-    padding: 1vw;
+    padding: 2vw 0 1vw;
     font-weight: lighter;
+    text-align: center;
 }
-#teamForm{
+
+#teamForm {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 2vw;
-    gap: 2vw;
-}
-#page1 #teamForm #one,
-#page1 #teamForm #two,
-#page1 #teamForm #three,
-#page1 #teamForm #four{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
+    gap: 1.5vw;
+    width: 100%;
 }
 
-#teamForm  input{
+#teamForm .input-group {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#teamForm .input-group input {
     width: 30vw;
+    min-width: 250px;
     height: 3vw;
+    min-height: 40px;
     border: white 2px solid;
     border-radius: 1vw;
     color: white;
     background-color: transparent;
     padding-left: 1vw;
     font-size: 1.2vw;
-
 }
-#page1 #teamForm input:focus{
+
+#teamForm input:focus {
     outline: none;
     border: rgb(255, 0, 0) 2px solid;
     background-color: transparent;
 }
-#page1 #teamForm button{
+
+#teamForm button {
     background-color: red;
     color: white;
     width: 20vw;
+    min-width: 200px;
     height: 3vw;
+    min-height: 45px;
     font-size: 1.5vw;
     border: none;
     border-radius: 2vw;
     cursor: pointer;
 }
-#teamForm input::placeholder{
+
+#teamForm input::placeholder {
     color: white;
     font-size: 1.2vw;
-    
 }
+
+/* Make form vertical on small screens */
+@media (max-width: 768px) {
+    #teamForm .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #teamForm .input-group input {
+        width: 80vw;
+        font-size: 20px;
+    }
+    #teamForm input::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+    #teamForm button {
+        width: 60vw;
+        font-size: 25px;
+    }
+
+    #page1 #container h1, 
+    #page1 #container p {
+        font-size: 15px;
+    }
+}
+
+
 
 
 
