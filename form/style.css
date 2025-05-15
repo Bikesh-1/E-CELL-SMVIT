@@ -89,6 +89,12 @@ html, body {
     font-size: 1.2vw;
 }
 
+#page1 #container img{
+  height: 8vw;
+  padding: 0.5vw;
+  position: absolute;
+}
+
 /* Make form vertical on small screens */
 @media (max-width: 768px) {
     #teamForm .input-group {
