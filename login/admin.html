@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Event</title>
+</head>
+<style>
+
+  body{
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+  }
+  h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input{
+    width: 25vw;
+    height: 2.5vw;
+    border: none;
+    border-radius: 2vw;
+    padding-left: 1vw;
+  }
+  button{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2vw;
+    padding: 10px 20px;
+    width: 10vw;
+  }
+  #eventForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+<body>
+  <h2>Add New Event</h2>
+  <button type="button" onclick="logout()">Logout</button>
+  <form id="eventForm">
+    <input type="text" id="eventName" placeholder="Event Name" required><br><br>
+    <input type="text" id="eventType" placeholder="Type (Competition/Workshop/Seminar)" required><br><br>
+    <input type="text" id="eventStatus" placeholder="Status (open/closed)" required><br><br>
+    <input type="text" id="eventLink" placeholder="Registration Link" required><br><br>
+    <input type="file" id="eventImage" required><br><br>
+
+    <button type="submit">Upload Event</button>
+    
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
+  <script>
+    const client = new Appwrite.Client()
+      .setEndpoint('https://fra.cloud.appwrite.io/v1')
+      .setProject('6827669e0034bd430c0f');
+
+    const account = new Appwrite.Account(client);
+    const storage = new Appwrite.Storage(client);
+    const databases = new Appwrite.Databases(client);
+    const ID = Appwrite.ID;
+
+    const BUCKET_ID = '682766ea0023b9f55e6a';
+    const DATABASE_ID = '682767d2002d2ca2fc66';
+    const COLLECTION_ID = '682767e40000ebe5dafb';
+
+    // ✅ Check if user is logged in
+    account.get()
+      .then(user => {
+        console.log("Logged in as:", user.email);
+      })
+      .catch(() => {
+        alert("You must be logged in to access this page.");
+        window.location.href = "login.html";
+      });
+
+    // ✅ Logout function
+    function logout() {
+      account.deleteSession('current')
+        .then(() => {
+          alert("Logged out successfully!");
+          window.location.href = "login.html";
+        })
+        .catch(error => {
+          alert("Logout failed: " + error.message);
+        });
+    }
+
+    // ✅ Form submit handler
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('eventForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('eventName').value;
+        const type = document.getElementById('eventType').value;
+        const status = document.getElementById('eventStatus').value;
+        const regLink = document.getElementById('eventLink').value;
+        const image = document.getElementById('eventImage').files[0];
+
+        if (!name || !type || !status || !regLink || !image) {
+          alert('Please fill in all fields.');
+          return;
+        }
+
+        try {
+          const fileUpload = await storage.createFile(
+            BUCKET_ID,
+            ID.unique(),
+            image,
+            ['read("any")']
+          );
+
+          const fileId = fileUpload.$id;
+
+          await databases.createDocument(
+            DATABASE_ID,
+            COLLECTION_ID,
+            ID.unique(),
+            {
+              name: name,
+              type: type,
+              status: status,
+              regLink: regLink,
+              image: fileId
+            },
+            ['read("any")']
+          );
+
+          alert('✅ Event uploaded successfully!');
+          document.getElementById('eventForm').reset();
+        } catch (err) {
+          console.error('❌ Upload Error:', err);
+          alert('❌ Error uploading event: ' + err.message);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

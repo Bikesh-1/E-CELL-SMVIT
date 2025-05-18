@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+  }
+  h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 300px; */
+    margin: auto;
+  }
+  input{
+    width: 25vw;
+    height: 2.5vw;
+    border: none;
+    border-radius: 2vw;
+    padding-left: 1vw;
+  }
+
+  button{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2vw;
+    padding: 10px 20px;
+    width: 15vw;
+  }
+  img{
+    width: 5vw;
+  }
+</style>
+<body>
+  <img src="../images/whitelogo-ecell.svg" alt="">
+  <h2>Login</h2>
+  <p>E-CELL CORE MEMBER LOGIN</p>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
+  <script>
+    const client = new Appwrite.Client();
+    client.setEndpoint('https://fra.cloud.appwrite.io/v1') // Replace if self-hosted
+          .setProject('6827669e0034bd430c0f'); // 🔁 Replace this
+
+    const account = new Appwrite.Account(client);
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      account.createEmailPasswordSession(email, password)
+        .then(response => {
+          // Save session and redirect
+          console.log("Login successful:", response);
+          window.location.href = "admin.html";
+        })
+        .catch(error => {
+          alert("Login failed: " + error.message);
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

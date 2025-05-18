@@ -1,30 +1,97 @@
 
-const comp = document.querySelector("#comp");
-const work = document.querySelector("#work");
-const sem = document.querySelector("#sem");
+const client = new Appwrite.Client()
+      .setEndpoint('https://fra.cloud.appwrite.io/v1')
+      .setProject('6827669e0034bd430c0f');
 
-const card1 = document.querySelector("#card1");
-const card2 = document.querySelector("#card2");
-const card3 = document.querySelector("#card3");
+    const storage = new Appwrite.Storage(client);
+    const databases = new Appwrite.Databases(client);
+
+    const BUCKET_ID = '682766ea0023b9f55e6a';
+    const DATABASE_ID = '682767d2002d2ca2fc66';
+    const COLLECTION_ID = '682767e40000ebe5dafb';
+
+    const comp = document.getElementById('comp');
+    const work = document.getElementById('work');
+    const sem = document.getElementById('sem');
+
+    function showSection(containerId, activeButton) {
+      const sections = ['competitionContainer', 'workshopContainer', 'seminarContainer'];
+      sections.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+      [comp, work, sem].forEach(btn => btn.classList.remove('active'));
+
+      if (containerId) document.getElementById(containerId).style.display = 'flex';
+      if (activeButton) activeButton.classList.add('active');
+    }
+
+    async function loadEvents() {
+      try {
+        const res = await databases.listDocuments(DATABASE_ID, COLLECTION_ID);
+
+        const competitionContainer = document.getElementById('competitionContainer');
+        const workshopContainer = document.getElementById('workshopContainer');
+        const seminarContainer = document.getElementById('seminarContainer');
+
+        let hasCompetition = false;
+        let hasWorkshop = false;
+        let hasSeminar = false;
+
+        res.documents.forEach(event => {
+          const type = event.type?.toLowerCase();
+          if (!type) return;
+
+          const isOpen = event.status?.toLowerCase() === 'open';
+          const imageUrl = event.image
+            ? storage.getFileView(BUCKET_ID, event.image)
+            : 'https://via.placeholder.com/300x400?text=Event+Image';
+
+          const card = document.createElement('div');
+          card.className = 'cardh';
+          card.innerHTML = `
+            <img src="${imageUrl}" alt="${type} Image">
+            <div class="overlay">
+              <button class="register-btn">
+                <a href="${isOpen ? event.regLink : '#'}" target="_blank" style="color: ${isOpen ? 'white' : 'red'}">
+                  ${isOpen ? 'Register Now' : 'Registrations Closed'}
+                </a>
+              </button>
+            </div>
+          `;
+
+          if (type === 'competition') {
+            competitionContainer.appendChild(card);
+            hasCompetition = true;
+          } else if (type === 'workshop') {
+            workshopContainer.appendChild(card);
+            hasWorkshop = true;
+          } else if (type === 'seminar') {
+            seminarContainer.appendChild(card);
+            hasSeminar = true;
+          }
+        });
+
+        if (hasCompetition) {
+          showSection('competitionContainer', comp);
+        } else if (hasWorkshop) {
+          showSection('workshopContainer', work);
+        } else if (hasSeminar) {
+          showSection('seminarContainer', sem);
+        }
+      } catch (err) {
+        console.error('Error loading events:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      comp.addEventListener('click', () => showSection('competitionContainer', comp));
+      work.addEventListener('click', () => showSection('workshopContainer', work));
+      sem.addEventListener('click', () => showSection('seminarContainer', sem));
+
+      loadEvents();
+    });
 
 
-function showSection(cardToShow, activeButton) {
-    
-    [card1, card2, card3].forEach(card => card.style.display = "none");
-    
-    
-    [comp, work, sem].forEach(button => button.classList.remove("active"));
-    
-   
-    cardToShow.style.display = "block";
-    activeButton.classList.add("active");
-}
-
-showSection(card1, comp);
-
-comp.addEventListener("click", () => showSection(card1, comp));
-work.addEventListener("click", () => showSection(card2, work));
-sem.addEventListener("click", () => showSection(card3, sem));
 
 
 

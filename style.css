@@ -345,111 +345,108 @@ html,body{
 
 
 #page4{
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: #ffffff;
     position: relative;
     padding: 2vw;
 }
-#page4 h1{
-    font-size: 2.5vw;
-}
-/* Container for event cards */
-#page4 #eventscards {
-    gap: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5vw;
+
+    #page4 > h1 {
+      text-align: center;
+      font-size: 2.5vw;
+      color: #000;
+    }
+
+    #Events {
+      background: #000;
+      border-radius: 2vw;
+      padding: 2vw;
+      height: 85vh;
+    }
+
+    #eventstxt {
+      display: flex;;
+      justify-content: center;
+      gap: 3vw;
+      margin-bottom: 2vw;
+    }
+
+    #eventstxt h1 {
+      color: white;
+    font-weight: 900;
+      font-size: 2vw;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    #eventstxt h1:hover {
+      color: #ff4d4d;
+      transform: scale(1.05);
+    }
+
+    #eventstxt h1.active {
+      color: #ff0000;
+      border-bottom: 2px solid #ff0000;
+    }
+
+    .event-group {
+      display: none;
+      
+      flex-wrap: wrap;
+      gap: 2vw;
+      justify-content: center;
+    }
+
+    .cardh {
+      width: 22vw;
+      height: 30vw;
+      background: #000;
+      border-radius: 2vw;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .cardh img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+.overlay {
+  position: absolute;
+  bottom: 1vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
-/* Main event section styling */
-#page4 #Events {
-    margin-top: 1vw;
-    height: 90vh;
-    width: 100%;
-    background-color: #000;
-    border-radius: 2vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: column; */
+.register-btn {
+  background-color: black;
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 600;
+  padding: 0.6vw 1.4vw;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: auto;
+  white-space: nowrap;
 }
 
-/* Card styling */
-#page4 #eventscards .card {
-    height: 30vw;
-    width: 22vw;
-    background-color: #000;
-    border-radius: 2vw;
-    overflow: hidden;
-    position: relative;
-    display: none; /* Hide all cards by default */
-}
 
-#page4 #eventscards img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* Overlay for card text and button */
-
-#page4 #eventscards .overlay {
-    position: absolute;
-    padding: 2vw;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); Add a semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    z-index: 2; /* Ensure it's above the image */
-}
-#page4 #eventscards .register-btn a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Register button styling */
-#page4 #eventscards .register-btn {
-    background-color: black;
-    color: white;
-    font-size: 1.5vw;
-    font-weight: 700;
-    height: 50px;
-    padding: 0.5vw;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#page4 #eventscards .register-btn:hover {
+.register-btn:hover {
     background-color: #181818;
 }
 
-/* Header section for event types */
-#eventstxt h1 {
-    color: #504A45;
-    text-transform: uppercase;
-    font-size: 5vw;
-    font-weight: 800;
-    cursor: pointer;
-    margin-left: 7vw;
-    transition: color 0.3s ease, margin-left 0.3s ease;
+.register-btn a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Active state styling for selected event type */
-#eventstxt h1.active {
-    color: #ffffff;
-    margin-left: 5vw;
-}
+
 
 .con{
     padding: 2vw;
@@ -802,15 +799,7 @@ html,body{
     justify-content: center;
     flex-wrap: wrap;
 }
-#page4  .overlay button a{
-    font-size: 1.5vw;
-    color: red;
-    font-weight: 500;
-}
-#page4  .overlay button{
-    width: 20vw;
-    
-}
+
 #advisor-card1{
     text-align: center;
     padding: 5vw;

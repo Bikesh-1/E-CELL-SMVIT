@@ -116,10 +116,12 @@
                     
                     <h4><a style="color: white;" href="#page4" class="eventbtn">Events</a></h4>
                     <h4><a style="color: white;" href="#page10" class="teambtn">Our Team</a></h4>
+                    
                     <!-- <h4><a href="#">Gallery</a></h4> -->
                     
                     <h4><a style="color: white;" href="./Gallery/gallery.html">Gallery</a></h4>
                     <h4 style="background-color: rgb(255, 255, 255); border: none; border-radius: 1vw; color: black;"><a href="#">ExtraMile</a></h4>
+                    <h4 style="background-color: rgb(255, 255, 255); border: none; border-radius: 1vw; color: black;"><a href="./Test/login.html">Login</a></h4>
                     <h4 style="background-color: rgb(255, 255, 255); border: none; border-radius: 1vw;"><a href="./form/index.html">Crisis CTRL</a></h4>
                 </div>
                 <div id="hamu">
@@ -225,36 +227,20 @@
         </div>
         
         <div id="page4">
-            <h1>EVENTS</h1>
-            <div id="Events">
-                <div id="eventstxt">
-                    <h1 id="comp">Competition</h1>
-                    <h1 id="work">Workshop</h1>
-                    <h1 id="sem">Seminar</h1>
-                </div>
-                <div id="eventscards">
-                    <div id="card1" class="card">
-                        <img id="compImg" src="./images/startpitch.jpg" alt="">
-                        <div class="overlay">
-                            <button class="register-btn"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeyQU_aMIKywgCGHFSFlPDWbw8FWxu9FeZg0Frr_4Av2leNaA/viewform" target="_blank" rel="noopener noreferrer" style="color: red;" >Registrations are Closed</a></button>
-                        </div>
-                    </div>
-                    <div id="card2" class="card">
-                        <img id="workImg" src="./images/WhatsApp Image 2024-10-19 at 17.57.35_d242ddbf.jpg" alt="">
-                        <div class="overlay" >
-                            <button class="register-btn"><a href="#" style="color: red;">Registrations are Closed</a></button>
-                        </div>
-                    </div>
-                    <div id="card3" class="card">
-                        <img id="semImg" src="./images/WhatsApp Image 2024-10-03 at 16.43.34_94514cfb.jpg" alt="">
-                        <div class="overlay">
-                            <button class="register-btn"><a href="#" style="color: red;">Registrations are Closed</a></button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
+    <h1>EVENTS</h1>
+    <div id="Events">
+      <div id="eventstxt">
+        <h1 id="comp">Competition</h1>
+        <h1 id="work">Workshop</h1>
+        <h1 id="sem">Seminar</h1>
+      </div>
+      <div id="eventscards">
+        <div id="competitionContainer" class="event-group"></div>
+        <div id="workshopContainer" class="event-group"></div>
+        <div id="seminarContainer" class="event-group"></div>
+      </div>
+    </div>
+  </div>
         <div id="page5">
             <h1 id="page5h1">OUR ACHIEVEMENTS</h1>
             <div id="ach-middle">
@@ -904,7 +890,7 @@
             </div>
         </div>
     </div>
-
+<script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
