@@ -49,6 +49,34 @@
     width: 5vw;
     position: absolute;
   }
+  input[type="file"] {
+  display: block;
+  width: 30vw;
+  padding:1vw;
+  border-radius: 2vw;
+  border: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 1vw;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 0.5vw 1.2vw;
+  border-radius: 1.5vw;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 1vw;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #e60000;
+}
 </style>
 <body>
   <img src="../images/whitelogo-ecell.svg" alt="">
