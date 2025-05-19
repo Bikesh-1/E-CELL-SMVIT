@@ -8,21 +8,25 @@
 
   body{
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background: linear-gradient(135deg, #000000, #0f0f0f, #1a1a2e, #000000);
     padding: 20px;
     color: white;
+    height: 100vh;
+    overflow: hidden;
   }
   h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2vw;
   }
   input{
-    width: 25vw;
+    width: 30vw;
     height: 2.5vw;
     border: none;
     border-radius: 2vw;
     padding-left: 1vw;
+    font-size: 1.1vw;
   }
   button{
     background-color: red;
@@ -31,16 +35,25 @@
     border-radius: 2vw;
     padding: 10px 20px;
     width: 10vw;
+    font-size: 1.1vw;
+    height: 3vw;
+    cursor: pointer;
   }
   #eventForm{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+  }
+  img{
+    width: 5vw;
+    position: absolute;
   }
 </style>
 <body>
+  <img src="../images/whitelogo-ecell.svg" alt="">
   <h2>Add New Event</h2>
-  <button type="button" onclick="logout()">Logout</button>
+  <button style="position: absolute; color: black; background-color: white; top: 5%; right: 5%;" type="button" onclick="logout()">Logout</button>
   <form id="eventForm">
     <input type="text" id="eventName" placeholder="Event Name" required><br><br>
     <input type="text" id="eventType" placeholder="Type (Competition/Workshop/Seminar)" required><br><br>

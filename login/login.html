@@ -5,8 +5,12 @@
 </head>
 <style>
   body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background: linear-gradient(135deg, #000000, #0f0f0f, #1a1a2e, #000000);
     padding: 20px;
     color: white;
   }
@@ -14,11 +18,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
+    font-size: 2vw;
   }
   p{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5vw;
   }
   form {
     display: flex;
@@ -33,15 +40,21 @@
     border: none;
     border-radius: 2vw;
     padding-left: 1vw;
+    font-size: 1.1vw;
   }
-
+  input:focus{
+    outline: none;
+    border: 2px solid red;
+  }
   button{
     background-color: red;
     color: white;
     border: none;
     border-radius: 2vw;
     padding: 10px 20px;
-    width: 15vw;
+    width: 10vw;
+    font-size: 1.1vw;
+    height: 3vw;
   }
   img{
     width: 5vw;
@@ -54,7 +67,7 @@
   <form id="loginForm">
     <input type="email" id="email" placeholder="Email" required><br><br>
     <input type="password" id="password" placeholder="Password" required><br><br>
-    <button type="submit">Login</button>
+    <button type="submit" style="cursor: pointer;">Login</button>
   </form>
 
   <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
