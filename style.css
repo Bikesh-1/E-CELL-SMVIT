@@ -1277,7 +1277,7 @@ button:hover {
         border-radius: 10px;
     }
     #page3{
-        height: 150vh;
+        height: auto;
         width: 100%;
         
     }
