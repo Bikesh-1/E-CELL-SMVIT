@@ -1244,6 +1244,11 @@ button:hover {
         left: 50%;
         transform: translate(-50%,-50%);
     }
+    #page2{
+        height: auto;
+        width: 100%;
+        
+    }
     #page2 h1{
         color: rgb(0, 0, 0);
         font-size: 40px;
@@ -1342,6 +1347,15 @@ button:hover {
         font-size: 15px;
         text-align: center;
     }
+    #page4{
+        height: auto;
+        width: 100%;
+    }
+    #page4 > h1 {
+      text-align: center;
+      font-size: 30px;
+      color: #000;
+    }
     #page4 #Events #eventstxt{
         display: flex;
         align-items: center;
@@ -1375,9 +1389,29 @@ button:hover {
         font-weight: 900;
     }
     
-
+#page5{
+        height: auto;
+        width: 100%;
+        
+    }
     #page5 #page5h1{
-        font-size: 38px;
+        font-size: 30px;
+    }
+
+    #page6{
+        height: auto;
+        width: 100%;
+        
+    }
+    #page11{
+        height: auto;
+        width: 100%;
+        
+    }
+    #page13{
+        height: auto;
+        width: 100%;
+        
     }
     #page12{
         display: flex;
