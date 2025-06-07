@@ -1353,8 +1353,16 @@ button:hover {
   
         display: flex;
     }
- 
-    
+    #page4 #Events #eventscards .cardh{
+        width: 150px;
+        height: 200px;
+        /* height: auto; */
+        border-radius: 10px;
+    }
+    #page4 #Events #eventscards .cardh .overlay .register-btn{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
     #page4 #Events #eventstxt h1{
         font-size: 40px;
         /* color: white; */
