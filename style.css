@@ -1047,14 +1047,14 @@ button:hover {
 #page1 #middle #moti{
     display: none;
 }
-/* .hamburger {
+.hamburger {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 5px;
-} */
+}
 
-/* .line {
+.line {
     width: 30px;
     height: 3px;
     border-radius: 2px;
@@ -1076,9 +1076,9 @@ button:hover {
     right: -200px;
     transition: right 0.3s ease;
     z-index: 1000;
-} */
+}
 
-/* .menu.active {
+.menu.active {
     right: 0;
     display: flex;
 }
@@ -1110,7 +1110,7 @@ button:hover {
 
   #hamu{
     display: none;
-  } */
+  }
   #page2 #responsive-page2{
     display: none;
   }
@@ -1336,13 +1336,32 @@ button:hover {
         font-size: 15px;
         text-align: center;
     }
-    #page4 h1{
+    #page4 #Events #eventstxt{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+
+    }
+    #page4 #Events{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    #page4 #Events #eventscards{
+  
+        display: flex;
+    }
+ 
+    
+    #page4 #Events #eventstxt h1{
         font-size: 40px;
+        /* color: white; */
         font-weight: 900;
     }
+    
+
     #page5 #page5h1{
         font-size: 38px;
     }
@@ -1351,21 +1370,7 @@ button:hover {
         align-items: center;
         justify-content: center;
     }
-    #page4 #Events{
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        flex-direction: column-reverse;
-        gap: 50px;
-    }
-    #page4 #eventscards .card{
-        height: 400px;
-        width: 300px;
-    }
-    #page4 #eventscards .overlay button{
-        font-size: large;
-        padding: 4px;
-    }
+    
     #page6 #txt h1{
         font-size: 20px;
     }

@@ -231,15 +231,15 @@ document.querySelectorAll('.teambtn').forEach(link => {
   });
 });
 
-// document.getElementById('hamburger').addEventListener('click', function() {
-//   const menu = document.getElementById('menu');
-//   menu.classList.add('active');
-// });
+document.getElementById('hamburger').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  menu.classList.add('active');
+});
 
-// document.getElementById('close-btn').addEventListener('click', function() {
-//   const menu = document.getElementById('menu');
-//   menu.classList.remove('active');
-// });
+document.getElementById('close-btn').addEventListener('click', function() {
+  const menu = document.getElementById('menu');
+  menu.classList.remove('active');
+});
 
 
 
