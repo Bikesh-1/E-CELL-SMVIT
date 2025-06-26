@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Upload - Alumni Portal</title>
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
+  <style>
+    body {
+      background: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2vw;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2vw;
+      margin-bottom: 2vw;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      background-color: #1a1a1a;
+      padding: 2vw;
+      border-radius: 1vw;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    input, button {
+      padding: 0.8vw;
+      border-radius: 0.5vw;
+      font-size: 1vw;
+      border: none;
+    }
+
+    input[type="file"] {
+      background: #fff;
+      color: #000;
+    }
+
+    button {
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    #logoutBtn {
+      position: absolute;
+      top: 2vw;
+      right: 2vw;
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Upload Alumni Details</h2>
+  <button id="logoutBtn" onclick="logout()">Logout</button>
+
+  <form id="alumniForm">
+    <input type="text" id="alumniName" placeholder="Alumni Name" required />
+    <input type="text" id="alumniBatch" placeholder="Batch (e.g. 2021-25)" required />
+    <input type="text" id="alumniPosition" placeholder="Position (e.g. Coordinator)" required />
+    <input type="file" id="alumniImage" required />
+    <button type="submit">Upload Alumni</button>
+  </form>
+
+  <script>
+    // ✅ Replace these with your actual Appwrite IDs
+    const PROJECT_ID = '685d0ae400122c4e24fc';
+    const DATABASE_ID = '685d0b570021a21f5666';
+    const COLLECTION_ID = '685d0b67000b8a16bf4d';
+    const BUCKET_ID = '685d0b31002c636194e9';
+
+    const client = new Appwrite.Client()
+      .setEndpoint('https://fra.cloud.appwrite.io/v1')
+      .setProject(PROJECT_ID);
+
+    const account = new Appwrite.Account(client);
+    const storage = new Appwrite.Storage(client);
+    const databases = new Appwrite.Databases(client);
+    const ID = Appwrite.ID;
+
+    // ✅ Check if user is logged in
+    account.get()
+      .then(user => {
+        console.log("Logged in as:", user.email);
+      })
+      .catch(() => {
+        alert("You must be logged in to access this page.");
+        window.location.href = "login.html"; // or change to your login page
+      });
+
+    // ✅ Logout function
+    function logout() {
+      account.deleteSession('current')
+        .then(() => {
+          alert("Logged out!");
+          window.location.href = "login.html";
+        })
+        .catch(err => alert("Logout failed: " + err.message));
+    }
+
+    // ✅ Upload Handler
+    document.getElementById('alumniForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('alumniName').value;
+      const batch = document.getElementById('alumniBatch').value;
+      const position = document.getElementById('alumniPosition').value;
+      const image = document.getElementById('alumniImage').files[0];
+
+      if (!name || !batch || !position || !image) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      try {
+        // 📤 Upload image to Appwrite Storage
+        const uploaded = await storage.createFile(BUCKET_ID, ID.unique(), image, ['read("any")']);
+        const imageFileId = uploaded.$id;
+
+        // 📄 Create alumni document
+        await databases.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
+          name: name,
+          batch: batch,
+          position: position,
+          image: imageFileId
+        }, ['read("any")']);
+
+        alert("✅ Alumni uploaded successfully!");
+        document.getElementById('alumniForm').reset();
+      } catch (err) {
+        console.error("❌ Upload error:", err);
+        alert("Error uploading: " + err.message);
+      }
+    });
+  </script>
+</body>
+</html>

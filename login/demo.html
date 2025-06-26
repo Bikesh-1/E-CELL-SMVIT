@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-CELL ALUMNI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind or custom styles (if needed) -->
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .head {
+      text-align: center;
+      font-size: 2vw;
+      padding: 2vw;
+      font-weight: bold;
+    }
+    .alumni-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2vw;
+      justify-content: center;
+      padding: 2vw;
+    }
+    #head2 {
+      background-color: #1a1a2e;
+      padding: 1.5vw;
+      border-radius: 1.5vw;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+    .img img {
+      width: 100%;
+      height: auto;
+      border-radius: 1vw;
+    }
+    #head2 p {
+      margin: 0.5vw 0;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="head">BATCH 2021-25</p>
+
+  <div class="alumni-container" id="alumniContainer">
+    <!-- Dynamic cards will be injected here -->
+  </div>
+
+  <!-- Appwrite SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
+  <script>
+    const client = new Appwrite.Client()
+      .setEndpoint('https://fra.cloud.appwrite.io/v1')
+      .setProject('685d0ae400122c4e24fc');
+
+    const databases = new Appwrite.Databases(client);
+    const storage = new Appwrite.Storage(client);
+
+    const DATABASE_ID = '685d0b570021a21f5666';
+    const COLLECTION_ID = '685d0b67000b8a16bf4d';
+    const BUCKET_ID = '685d0b31002c636194e9';
+
+    async function loadAlumni() {
+      try {
+        const res = await databases.listDocuments(DATABASE_ID, COLLECTION_ID);
+        const alumniList = res.documents;
+
+        const container = document.getElementById('alumniContainer');
+        container.innerHTML = ''; // Clear existing content
+
+        for (const alumni of alumniList) {
+          const fileId = alumni.image;
+          const imageUrl = storage.getFilePreview(BUCKET_ID, fileId);
+
+          const card = document.createElement('div');
+          card.id = 'head2';
+          card.innerHTML = `
+            <div class="img">
+              <img src="${imageUrl}" alt="${alumni.name}">
+            </div>
+            <div>
+              <p>${alumni.position}</p>
+              <p>${alumni.name}</p>
+              <p>${alumni.batch}</p>
+            </div>
+          `;
+          container.appendChild(card);
+        }
+      } catch (error) {
+        console.error('❌ Failed to load alumni:', error);
+      }
+    }
+
+    window.onload = loadAlumni;
+  </script>
+
+</body>
+</html>

@@ -1,100 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Upload Event</title>
-  <link rel="shortcut icon" href="../images/whitelogo-ecell.svg" type="image/x-icon">
-</head>
-<style>
-
-  body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000000, #0f0f0f, #1a1a2e, #000000);
-    padding: 20px;
-    color: white;
-    height: 100vh;
-    overflow: hidden;
-  }
-  h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2vw;
-  }
-  input{
-    width: 30vw;
-    height: 2.5vw;
-    border: none;
-    border-radius: 2vw;
-    padding-left: 1vw;
-    font-size: 1.1vw;
-  }
-  button{
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 2vw;
-    padding: 10px 20px;
-    width: 10vw;
-    font-size: 1.1vw;
-    height: 3vw;
-    cursor: pointer;
-  }
-  #eventForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  img{
-    width: 5vw;
-    position: absolute;
-  }
-  input[type="file"] {
-  display: block;
-  width: 30vw;
-  padding:1vw;
-  border-radius: 2vw;
-  border: none;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 1vw;
-  transition: background-color 0.3s ease;
-}
-
-input[type="file"]::file-selector-button {
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  padding: 0.5vw 1.2vw;
-  border-radius: 1.5vw;
-  font-weight: bold;
-  cursor: pointer;
-  margin-right: 1vw;
-  transition: background-color 0.3s ease;
-}
-
-input[type="file"]::file-selector-button:hover {
-  background-color: #e60000;
-}
-</style>
-<body>
-  <img src="../images/whitelogo-ecell.svg" alt="">
-  <h2>Add New Event</h2>
-  <button style="position: absolute; color: black; background-color: white; top: 5%; right: 5%;" type="button" onclick="logout()">Logout</button>
-  <form id="eventForm">
-    <input type="text" id="eventName" placeholder="Event Name" required><br><br>
-    <input type="text" id="eventType" placeholder="Type (Competition/Workshop/Seminar)" required><br><br>
-    <input type="text" id="eventStatus" placeholder="Status (open/closed)" required><br><br>
-    <input type="text" id="eventLink" placeholder="Registration Link" required><br><br>
-    <input type="file" id="eventImage" required><br><br>
-
-    <button type="submit">Upload Event</button>
-    
-  </form>
-
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard - E-Cell</title>
   <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.2"></script>
+  <link rel="shortcut icon" href="../images/whitelogo-ecell.svg" type="image/x-icon">
+  <style>
+    :root {
+      --primary: #ff3c3c;
+      --dark-bg: #121212;
+      --card-bg: #1e1e1e;
+      --input-bg: #2c2c2c;
+      --text-light: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--dark-bg);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-light);
+      padding: 2vw;
+      display: flex;
+      flex-direction: column;
+      gap: 3vw;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.8vw;
+      margin-bottom: 1vw;
+      letter-spacing: 1px;
+    }
+
+    .section {
+      background-color: var(--card-bg);
+      border-radius: 1vw;
+      padding: 2vw;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+    }
+
+    input, button {
+      padding: 1vw;
+      font-size: 1vw;
+      border-radius: 0.6vw;
+      border: none;
+      transition: all 0.3s ease;
+    }
+
+    input {
+      background-color: var(--input-bg);
+      color: var(--text-light);
+    }
+
+    input::placeholder {
+      color: #bbb;
+    }
+
+    input[type="file"] {
+      background: #fff;
+      color: #000;
+      padding: 0.8vw;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e82c2c;
+    }
+
+    #logoutBtn {
+      position: fixed;
+      top: 1.5vw;
+      right: 2vw;
+      background: white;
+      color: black;
+      font-weight: bold;
+      padding: 0.8vw 1.5vw;
+      border-radius: 2vw;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="logoutBtn" onclick="logout()">Logout</button>
+<div style="display: flex; align-items: center; justify-content: center;">
+  <div class="section">
+    <h2>Upload Event</h2>
+    <form id="eventForm">
+      <input type="text" id="eventName" placeholder="Event Name" required>
+      <input type="text" id="eventType" placeholder="Type (Competition/Workshop/Seminar)" required>
+      <input type="text" id="eventStatus" placeholder="Status (open/closed)" required>
+      <input type="text" id="eventLink" placeholder="Registration Link" required>
+      <input type="file" id="eventImage" required>
+      <button type="submit">Upload Event</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Upload Alumni</h2>
+    <form id="alumniForm">
+      <input type="text" id="alumniName" placeholder="Alumni Name" required />
+      <input type="text" id="alumniBatch" placeholder="Batch (e.g. 2021-25)" required />
+      <input type="text" id="alumniPosition" placeholder="Position (e.g. Coordinator)" required />
+      <input type="file" id="alumniImage" required />
+      <button type="submit">Upload Alumni</button>
+    </form>
+  </div>
+</div>
+  
+
   <script>
     const client = new Appwrite.Client()
       .setEndpoint('https://fra.cloud.appwrite.io/v1')
@@ -105,79 +134,71 @@ input[type="file"]::file-selector-button:hover {
     const databases = new Appwrite.Databases(client);
     const ID = Appwrite.ID;
 
-    const BUCKET_ID = '682766ea0023b9f55e6a';
-    const DATABASE_ID = '682767d2002d2ca2fc66';
-    const COLLECTION_ID = '682767e40000ebe5dafb';
+    const EVENT_BUCKET_ID = '682766ea0023b9f55e6a';
+    const EVENT_DB_ID = '682767d2002d2ca2fc66';
+    const EVENT_COLLECTION_ID = '682767e40000ebe5dafb';
 
-    // ✅ Check if user is logged in
-    account.get()
-      .then(user => {
-        console.log("Logged in as:", user.email);
-      })
-      .catch(() => {
-        alert("You must be logged in to access this page.");
-        window.location.href = "login.html";
-      });
+    const ALUMNI_BUCKET_ID = '685d0b31002c636194e9';
+    const ALUMNI_DB_ID = '685d0b570021a21f5666';
+    const ALUMNI_COLLECTION_ID = '685d0b67000b8a16bf4d';
 
-    // ✅ Logout function
+    account.get().then(user => {
+      console.log("Logged in as:", user.email);
+    }).catch(() => {
+      alert("You must be logged in to access this page.");
+      window.location.href = "login.html";
+    });
+
     function logout() {
-      account.deleteSession('current')
-        .then(() => {
-          alert("Logged out successfully!");
-          window.location.href = "login.html";
-        })
-        .catch(error => {
-          alert("Logout failed: " + error.message);
-        });
+      account.deleteSession('current').then(() => {
+        alert("Logged out successfully!");
+        window.location.href = "login.html";
+      }).catch(err => alert("Logout failed: " + err.message));
     }
 
-    // ✅ Form submit handler
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('eventForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
+    document.getElementById('eventForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('eventName').value;
+      const type = document.getElementById('eventType').value;
+      const status = document.getElementById('eventStatus').value;
+      const regLink = document.getElementById('eventLink').value;
+      const image = document.getElementById('eventImage').files[0];
 
-        const name = document.getElementById('eventName').value;
-        const type = document.getElementById('eventType').value;
-        const status = document.getElementById('eventStatus').value;
-        const regLink = document.getElementById('eventLink').value;
-        const image = document.getElementById('eventImage').files[0];
+      if (!name || !type || !status || !regLink || !image) return alert('Fill all fields');
 
-        if (!name || !type || !status || !regLink || !image) {
-          alert('Please fill in all fields.');
-          return;
-        }
+      try {
+        const file = await storage.createFile(EVENT_BUCKET_ID, ID.unique(), image, ['read("any")']);
+        await databases.createDocument(EVENT_DB_ID, EVENT_COLLECTION_ID, ID.unique(), {
+          name, type, status, regLink, image: file.$id
+        }, ['read("any")']);
+        alert('✅ Event uploaded!');
+        e.target.reset();
+      } catch (err) {
+        console.error(err);
+        alert('❌ Error uploading event: ' + err.message);
+      }
+    });
 
-        try {
-          const fileUpload = await storage.createFile(
-            BUCKET_ID,
-            ID.unique(),
-            image,
-            ['read("any")']
-          );
+    document.getElementById('alumniForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('alumniName').value;
+      const batch = document.getElementById('alumniBatch').value;
+      const position = document.getElementById('alumniPosition').value;
+      const image = document.getElementById('alumniImage').files[0];
 
-          const fileId = fileUpload.$id;
+      if (!name || !batch || !position || !image) return alert('Fill all fields');
 
-          await databases.createDocument(
-            DATABASE_ID,
-            COLLECTION_ID,
-            ID.unique(),
-            {
-              name: name,
-              type: type,
-              status: status,
-              regLink: regLink,
-              image: fileId
-            },
-            ['read("any")']
-          );
-
-          alert('✅ Event uploaded successfully!');
-          document.getElementById('eventForm').reset();
-        } catch (err) {
-          console.error('❌ Upload Error:', err);
-          alert('❌ Error uploading event: ' + err.message);
-        }
-      });
+      try {
+        const file = await storage.createFile(ALUMNI_BUCKET_ID, ID.unique(), image, ['read("any")']);
+        await databases.createDocument(ALUMNI_DB_ID, ALUMNI_COLLECTION_ID, ID.unique(), {
+          name, batch, position, image: file.$id
+        }, ['read("any")']);
+        alert('✅ Alumni uploaded!');
+        e.target.reset();
+      } catch (err) {
+        console.error(err);
+        alert('❌ Error uploading alumni: ' + err.message);
+      }
     });
   </script>
 </body>
